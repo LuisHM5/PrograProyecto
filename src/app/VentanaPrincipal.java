@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package app;
-
+//Hola como estas?
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
 
@@ -15,7 +15,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public VentanaPrincipal() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
