@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package app;
-
+//Hola mundo
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
 
