@@ -10,5 +10,5 @@ package app;
  * @author G4M3R-PC
  */
 public class jjj {
-    
+    System.out.println("Hola mundo");
 }
