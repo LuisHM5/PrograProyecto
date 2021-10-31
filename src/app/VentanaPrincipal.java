@@ -5,7 +5,7 @@
  */
 package app;
 
-//ggg
+
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
 
