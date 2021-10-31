@@ -28,6 +28,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         pnlPrincipal = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        Panel3 = new javax.swing.JPanel();
         pnlSuperior = new javax.swing.JPanel();
         lblCerrar = new javax.swing.JLabel();
         lblMaximizar = new javax.swing.JLabel();
@@ -76,6 +77,19 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         pnlPrincipal.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 350, 170));
+
+        javax.swing.GroupLayout Panel3Layout = new javax.swing.GroupLayout(Panel3);
+        Panel3.setLayout(Panel3Layout);
+        Panel3Layout.setHorizontalGroup(
+            Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        Panel3Layout.setVerticalGroup(
+            Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        pnlPrincipal.add(Panel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 200, -1, -1));
 
         pnlSuperior.setBackground(new java.awt.Color(234, 239, 211));
         pnlSuperior.setAlignmentX(0.0F);
@@ -134,7 +148,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(lblMinimizar)
                     .addComponent(lblMaximizar)
                     .addComponent(lblCerrar))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pnlLateral.setBackground(new java.awt.Color(41, 31, 21));
@@ -525,6 +539,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Panel3;
     private javax.swing.JPanel btnAdminProcutos;
     private javax.swing.JPanel btnCerrarSesion;
     private javax.swing.JPanel btnEjemplo;
