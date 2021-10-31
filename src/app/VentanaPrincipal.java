@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package app;
-//LEL
+//holasd
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
 
