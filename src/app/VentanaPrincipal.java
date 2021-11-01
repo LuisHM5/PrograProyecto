@@ -60,7 +60,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setUndecorated(true);
 
         pnlPrincipal.setBackground(new java.awt.Color(172, 133, 93));
-        pnlPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        javax.swing.GroupLayout pnlPrincipalLayout = new javax.swing.GroupLayout(pnlPrincipal);
+        pnlPrincipal.setLayout(pnlPrincipalLayout);
+        pnlPrincipalLayout.setHorizontalGroup(
+            pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 920, Short.MAX_VALUE)
+        );
+        pnlPrincipalLayout.setVerticalGroup(
+            pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 540, Short.MAX_VALUE)
+        );
 
         pnlSuperior.setBackground(new java.awt.Color(234, 239, 211));
         pnlSuperior.setAlignmentX(0.0F);
@@ -402,7 +412,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(pnlLateral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlSuperior, javax.swing.GroupLayout.DEFAULT_SIZE, 920, Short.MAX_VALUE)
-                    .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 920, Short.MAX_VALUE)))
+                    .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -410,7 +420,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlSuperior, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE))
+                .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -468,6 +478,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void btnInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInicioMouseClicked
         btnInicio.setBackground(new Color(124,109,91));
+        btnProductos.setBackground(new Color(89,54,14));
+        pnlPrincipal.removeAll();
+        pnlPrincipal.revalidate();
+        pnlPrincipal.repaint();
     }//GEN-LAST:event_btnInicioMouseClicked
 
     private void btnProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductosMouseClicked
