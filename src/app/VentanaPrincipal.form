@@ -29,7 +29,7 @@
               <Component id="pnlLateral" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="pnlSuperior" pref="920" max="32767" attributes="0"/>
-                  <Component id="pnlPrincipal" min="-2" pref="920" max="-2" attributes="0"/>
+                  <Component id="pnlPrincipal" pref="920" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -40,7 +40,7 @@
           <Group type="102" attributes="0">
               <Component id="pnlSuperior" min="-2" pref="60" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-              <Component id="pnlPrincipal" min="-2" pref="540" max="-2" attributes="0"/>
+              <Component id="pnlPrincipal" pref="540" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

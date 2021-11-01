@@ -3,6 +3,7 @@
  */
 package app;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
 
@@ -12,6 +13,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      */
     public VentanaPrincipal() {
         initComponents();
+        
     }
     
     /**
@@ -400,7 +402,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(pnlLateral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlSuperior, javax.swing.GroupLayout.DEFAULT_SIZE, 920, Short.MAX_VALUE)
-                    .addComponent(pnlPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 920, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 920, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -408,7 +410,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlSuperior, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(pnlPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE))
         );
 
         pack();
@@ -469,7 +471,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInicioMouseClicked
 
     private void btnProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductosMouseClicked
-        // TODO add your handling code here:
+        btnProductos.setBackground(new Color(124,109,91));
+        
+        ProductosPanel productos = new ProductosPanel();
+        productos.setSize(920,540);
+        productos.setLocation(0,0);
+        pnlPrincipal.removeAll();
+        pnlPrincipal.add(productos, BorderLayout.CENTER);
+        pnlPrincipal.revalidate();
+        pnlPrincipal.repaint();
     }//GEN-LAST:event_btnProductosMouseClicked
     
     /**
