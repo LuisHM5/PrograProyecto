@@ -13,7 +13,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      */
     public VentanaPrincipal() {
         initComponents();
-        
+        pnlAdminProductos.setVisible(false);        
     }
     
     /**
@@ -31,36 +31,36 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         lblMaximizar = new javax.swing.JLabel();
         lblMinimizar = new javax.swing.JLabel();
         pnlLateral = new javax.swing.JPanel();
-        btnCerrarSesion = new javax.swing.JPanel();
-        lblHome = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        btnInicio = new javax.swing.JPanel();
+        lblHome6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         btnProductos = new javax.swing.JPanel();
         lblHome2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         btnOrdenes = new javax.swing.JPanel();
         lblHome3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        btnAdminProcutos = new javax.swing.JPanel();
-        lblHome4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         btnExportar = new javax.swing.JPanel();
         lblHome5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        btnInicio = new javax.swing.JPanel();
-        lblHome6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        lblIcono = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
+        btnAdminProcutos = new javax.swing.JPanel();
+        lblHome4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         pnlAdminProductos = new javax.swing.JPanel();
-        btnAdminProcutos1 = new javax.swing.JPanel();
-        lblHome7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        btnAdminProcutos2 = new javax.swing.JPanel();
+        btnAddStock = new javax.swing.JPanel();
         lblHome12 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        btnAdminProcutos3 = new javax.swing.JPanel();
+        btnNuevoProducto = new javax.swing.JPanel();
         lblHome13 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        btnListaProductos = new javax.swing.JPanel();
+        lblHome7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        btnCerrarSesion = new javax.swing.JPanel();
+        lblHome = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        lblIcono = new javax.swing.JLabel();
+        jSep = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -152,33 +152,38 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnCerrarSesion.setBackground(new java.awt.Color(89, 54, 14));
+        btnInicio.setBackground(new java.awt.Color(89, 54, 14));
+        btnInicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnInicioMouseClicked(evt);
+            }
+        });
 
-        lblHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/exit-regular-24.png"))); // NOI18N
+        lblHome6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/home-regular-24.png"))); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel1.setText("Cerrar Sesion");
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel7.setText("Inicio");
 
-        javax.swing.GroupLayout btnCerrarSesionLayout = new javax.swing.GroupLayout(btnCerrarSesion);
-        btnCerrarSesion.setLayout(btnCerrarSesionLayout);
-        btnCerrarSesionLayout.setHorizontalGroup(
-            btnCerrarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnCerrarSesionLayout.createSequentialGroup()
+        javax.swing.GroupLayout btnInicioLayout = new javax.swing.GroupLayout(btnInicio);
+        btnInicio.setLayout(btnInicioLayout);
+        btnInicioLayout.setHorizontalGroup(
+            btnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnInicioLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(lblHome)
+                .addComponent(lblHome6)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(184, Short.MAX_VALUE))
         );
-        btnCerrarSesionLayout.setVerticalGroup(
-            btnCerrarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnCerrarSesionLayout.createSequentialGroup()
+        btnInicioLayout.setVerticalGroup(
+            btnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnInicioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(btnCerrarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblHome)
-                    .addComponent(jLabel1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(btnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHome6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         btnProductos.setBackground(new java.awt.Color(89, 54, 14));
@@ -245,7 +250,43 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        btnExportar.setBackground(new java.awt.Color(89, 54, 14));
+
+        lblHome5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/file-export-solid-24.png"))); // NOI18N
+        lblHome5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel6.setText("Exportar");
+        jLabel6.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        javax.swing.GroupLayout btnExportarLayout = new javax.swing.GroupLayout(btnExportar);
+        btnExportar.setLayout(btnExportarLayout);
+        btnExportarLayout.setHorizontalGroup(
+            btnExportarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnExportarLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblHome5)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        btnExportarLayout.setVerticalGroup(
+            btnExportarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnExportarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(btnExportarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblHome5)
+                    .addComponent(jLabel6))
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+
         btnAdminProcutos.setBackground(new java.awt.Color(89, 54, 14));
+        btnAdminProcutos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAdminProcutosMouseClicked(evt);
+            }
+        });
 
         lblHome4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/spreadsheet-regular-24.png"))); // NOI18N
 
@@ -274,103 +315,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        btnExportar.setBackground(new java.awt.Color(89, 54, 14));
-
-        lblHome5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/file-export-solid-24.png"))); // NOI18N
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel6.setText("Exportar");
-
-        javax.swing.GroupLayout btnExportarLayout = new javax.swing.GroupLayout(btnExportar);
-        btnExportar.setLayout(btnExportarLayout);
-        btnExportarLayout.setHorizontalGroup(
-            btnExportarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnExportarLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(lblHome5)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        btnExportarLayout.setVerticalGroup(
-            btnExportarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnExportarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(btnExportarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblHome5)
-                    .addComponent(jLabel6))
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
-
-        btnInicio.setBackground(new java.awt.Color(89, 54, 14));
-        btnInicio.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnInicioMouseClicked(evt);
-            }
-        });
-
-        lblHome6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/home-regular-24.png"))); // NOI18N
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel7.setText("Inicio");
-
-        javax.swing.GroupLayout btnInicioLayout = new javax.swing.GroupLayout(btnInicio);
-        btnInicio.setLayout(btnInicioLayout);
-        btnInicioLayout.setHorizontalGroup(
-            btnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnInicioLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(lblHome6)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(184, Short.MAX_VALUE))
-        );
-        btnInicioLayout.setVerticalGroup(
-            btnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnInicioLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(btnInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblHome6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        lblIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logoPequeño.png"))); // NOI18N
-
         pnlAdminProductos.setBackground(new java.awt.Color(41, 31, 21));
 
-        btnAdminProcutos1.setBackground(new java.awt.Color(65, 73, 82));
-
-        lblHome7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/notepad-regular-24.png"))); // NOI18N
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel8.setText("Lista productos");
-
-        javax.swing.GroupLayout btnAdminProcutos1Layout = new javax.swing.GroupLayout(btnAdminProcutos1);
-        btnAdminProcutos1.setLayout(btnAdminProcutos1Layout);
-        btnAdminProcutos1Layout.setHorizontalGroup(
-            btnAdminProcutos1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnAdminProcutos1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(lblHome7)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addContainerGap())
-        );
-        btnAdminProcutos1Layout.setVerticalGroup(
-            btnAdminProcutos1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnAdminProcutos1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(btnAdminProcutos1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblHome7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel8))
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
-
-        btnAdminProcutos2.setBackground(new java.awt.Color(65, 73, 82));
+        btnAddStock.setBackground(new java.awt.Color(65, 73, 82));
+        btnAddStock.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAddStockMouseClicked(evt);
+            }
+        });
 
         lblHome12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/add-to-queue-regular-24.png"))); // NOI18N
 
@@ -378,28 +330,33 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(204, 204, 204));
         jLabel14.setText("Añadir Stock");
 
-        javax.swing.GroupLayout btnAdminProcutos2Layout = new javax.swing.GroupLayout(btnAdminProcutos2);
-        btnAdminProcutos2.setLayout(btnAdminProcutos2Layout);
-        btnAdminProcutos2Layout.setHorizontalGroup(
-            btnAdminProcutos2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnAdminProcutos2Layout.createSequentialGroup()
+        javax.swing.GroupLayout btnAddStockLayout = new javax.swing.GroupLayout(btnAddStock);
+        btnAddStock.setLayout(btnAddStockLayout);
+        btnAddStockLayout.setHorizontalGroup(
+            btnAddStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnAddStockLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(lblHome12)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel14)
                 .addContainerGap())
         );
-        btnAdminProcutos2Layout.setVerticalGroup(
-            btnAdminProcutos2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnAdminProcutos2Layout.createSequentialGroup()
+        btnAddStockLayout.setVerticalGroup(
+            btnAddStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnAddStockLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(btnAdminProcutos2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(btnAddStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblHome12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel14))
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        btnAdminProcutos3.setBackground(new java.awt.Color(65, 73, 82));
+        btnNuevoProducto.setBackground(new java.awt.Color(65, 73, 82));
+        btnNuevoProducto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnNuevoProductoMouseClicked(evt);
+            }
+        });
 
         lblHome13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cart-add-solid-24.png"))); // NOI18N
 
@@ -407,24 +364,58 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(204, 204, 204));
         jLabel15.setText("Nuevo producto");
 
-        javax.swing.GroupLayout btnAdminProcutos3Layout = new javax.swing.GroupLayout(btnAdminProcutos3);
-        btnAdminProcutos3.setLayout(btnAdminProcutos3Layout);
-        btnAdminProcutos3Layout.setHorizontalGroup(
-            btnAdminProcutos3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnAdminProcutos3Layout.createSequentialGroup()
+        javax.swing.GroupLayout btnNuevoProductoLayout = new javax.swing.GroupLayout(btnNuevoProducto);
+        btnNuevoProducto.setLayout(btnNuevoProductoLayout);
+        btnNuevoProductoLayout.setHorizontalGroup(
+            btnNuevoProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnNuevoProductoLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(lblHome13)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel15)
                 .addContainerGap())
         );
-        btnAdminProcutos3Layout.setVerticalGroup(
-            btnAdminProcutos3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnAdminProcutos3Layout.createSequentialGroup()
+        btnNuevoProductoLayout.setVerticalGroup(
+            btnNuevoProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnNuevoProductoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(btnAdminProcutos3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(btnNuevoProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblHome13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel15))
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+
+        btnListaProductos.setBackground(new java.awt.Color(65, 73, 82));
+        btnListaProductos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnListaProductosMouseClicked(evt);
+            }
+        });
+
+        lblHome7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/notepad-regular-24.png"))); // NOI18N
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel8.setText("Lista productos");
+
+        javax.swing.GroupLayout btnListaProductosLayout = new javax.swing.GroupLayout(btnListaProductos);
+        btnListaProductos.setLayout(btnListaProductosLayout);
+        btnListaProductosLayout.setHorizontalGroup(
+            btnListaProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnListaProductosLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblHome7)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addContainerGap())
+        );
+        btnListaProductosLayout.setVerticalGroup(
+            btnListaProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnListaProductosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(btnListaProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblHome7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel8))
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
@@ -432,21 +423,53 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlAdminProductos.setLayout(pnlAdminProductosLayout);
         pnlAdminProductosLayout.setHorizontalGroup(
             pnlAdminProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlAdminProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(btnAdminProcutos2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnAdminProcutos3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(btnAdminProcutos1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnAddStock, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnNuevoProducto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnListaProductos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlAdminProductosLayout.setVerticalGroup(
             pnlAdminProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlAdminProductosLayout.createSequentialGroup()
                 .addGroup(pnlAdminProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAdminProcutos2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAddStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnlAdminProductosLayout.createSequentialGroup()
                         .addGap(44, 44, 44)
-                        .addComponent(btnAdminProcutos3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addComponent(btnAdminProcutos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnNuevoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(btnListaProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        btnCerrarSesion.setBackground(new java.awt.Color(89, 54, 14));
+
+        lblHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/exit-regular-24.png"))); // NOI18N
+        lblHome.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel1.setText("Cerrar Sesion");
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        javax.swing.GroupLayout btnCerrarSesionLayout = new javax.swing.GroupLayout(btnCerrarSesion);
+        btnCerrarSesion.setLayout(btnCerrarSesionLayout);
+        btnCerrarSesionLayout.setHorizontalGroup(
+            btnCerrarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnCerrarSesionLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblHome)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        btnCerrarSesionLayout.setVerticalGroup(
+            btnCerrarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnCerrarSesionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(btnCerrarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblHome)
+                    .addComponent(jLabel1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        lblIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logoPequeño.png"))); // NOI18N
 
         javax.swing.GroupLayout pnlLateralLayout = new javax.swing.GroupLayout(pnlLateral);
         pnlLateral.setLayout(pnlLateralLayout);
@@ -462,7 +485,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addComponent(lblIcono))
                     .addGroup(pnlLateralLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jSep, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnOrdenes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -475,7 +498,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGap(13, 13, 13)
                 .addComponent(lblIcono)
                 .addGap(11, 11, 11)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSep, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
                 .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
@@ -585,6 +608,50 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlPrincipal.revalidate();
         pnlPrincipal.repaint();
     }//GEN-LAST:event_btnProductosMouseClicked
+    static boolean expand=false;
+    private void btnAdminProcutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdminProcutosMouseClicked
+        if(expand==false)
+        {
+            pnlAdminProductos.setVisible(true);
+            expand=true;
+        }
+        else
+        {
+             pnlAdminProductos.setVisible(false);
+             expand=false;
+        }
+
+    }//GEN-LAST:event_btnAdminProcutosMouseClicked
+
+    private void btnAddStockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddStockMouseClicked
+        AnadirStock addstock = new AnadirStock();
+        addstock.setSize(920,540);
+        addstock.setLocation(0,0);
+        pnlPrincipal.removeAll();
+        pnlPrincipal.add(addstock, BorderLayout.CENTER);
+        pnlPrincipal.revalidate();
+        pnlPrincipal.repaint();
+    }//GEN-LAST:event_btnAddStockMouseClicked
+
+    private void btnNuevoProductoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoProductoMouseClicked
+        ListaProductos listprod = new ListaProductos();
+        listprod.setSize(920,540);
+        listprod.setLocation(0,0);
+        pnlPrincipal.removeAll();
+        pnlPrincipal.add(listprod, BorderLayout.CENTER);
+        pnlPrincipal.revalidate();
+        pnlPrincipal.repaint();
+    }//GEN-LAST:event_btnNuevoProductoMouseClicked
+
+    private void btnListaProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListaProductosMouseClicked
+        NuevoProducto nuevoprod = new NuevoProducto();
+        nuevoprod.setSize(920,540);
+        nuevoprod.setLocation(0,0);
+        pnlPrincipal.removeAll();
+        pnlPrincipal.add(nuevoprod, BorderLayout.CENTER);
+        pnlPrincipal.revalidate();
+        pnlPrincipal.repaint();
+    }//GEN-LAST:event_btnListaProductosMouseClicked
     
     /**
      * @param args the command line arguments
@@ -622,13 +689,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel btnAddStock;
     private javax.swing.JPanel btnAdminProcutos;
-    private javax.swing.JPanel btnAdminProcutos1;
-    private javax.swing.JPanel btnAdminProcutos2;
-    private javax.swing.JPanel btnAdminProcutos3;
     private javax.swing.JPanel btnCerrarSesion;
     private javax.swing.JPanel btnExportar;
     private javax.swing.JPanel btnInicio;
+    private javax.swing.JPanel btnListaProductos;
+    private javax.swing.JPanel btnNuevoProducto;
     private javax.swing.JPanel btnOrdenes;
     private javax.swing.JPanel btnProductos;
     private javax.swing.JLabel jLabel1;
@@ -640,7 +707,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSep;
     private javax.swing.JLabel lblCerrar;
     private javax.swing.JLabel lblHome;
     private javax.swing.JLabel lblHome12;
