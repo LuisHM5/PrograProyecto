@@ -72,7 +72,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlPrincipal.setLayout(pnlPrincipalLayout);
         pnlPrincipalLayout.setHorizontalGroup(
             pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1164, Short.MAX_VALUE)
+            .addGap(0, 1154, Short.MAX_VALUE)
         );
         pnlPrincipalLayout.setVerticalGroup(
             pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,6 +232,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel4.setText("Ordenes");
 
         btnAdminProcutos.setBackground(new java.awt.Color(89, 54, 14));
+        btnAdminProcutos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAdminProcutosMouseClicked(evt);
+            }
+        });
 
         lblHome4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/spreadsheet-regular-24.png"))); // NOI18N
 
@@ -242,29 +247,47 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlAdminProductos.setBackground(new java.awt.Color(124, 109, 91));
         pnlAdminProductos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        btnStock.setBackground(new java.awt.Color(124, 109, 91));
-        btnStock.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btnStock.setBackground(new java.awt.Color(65, 73, 82));
+        btnStock.setPreferredSize(new java.awt.Dimension(281, 50));
 
         lblHome8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/add-to-queue-regular-24.png"))); // NOI18N
-        btnStock.add(lblHome8, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 12, -1, 25));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(204, 204, 204));
         jLabel10.setText("Añadir stock");
-        btnStock.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 12, 218, -1));
 
-        btnNuevoProducto.setBackground(new java.awt.Color(124, 109, 91));
-        btnNuevoProducto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btnNuevoProducto.setBackground(new java.awt.Color(65, 73, 82));
+        btnNuevoProducto.setPreferredSize(new java.awt.Dimension(281, 50));
 
         lblHome10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cart-add-solid-24.png"))); // NOI18N
-        btnNuevoProducto.add(lblHome10, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 12, -1, 25));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(204, 204, 204));
         jLabel12.setText("Nuevo producto");
-        btnNuevoProducto.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 12, 218, -1));
 
-        btnNuevoProducto1.setBackground(new java.awt.Color(124, 109, 91));
+        javax.swing.GroupLayout btnNuevoProductoLayout = new javax.swing.GroupLayout(btnNuevoProducto);
+        btnNuevoProducto.setLayout(btnNuevoProductoLayout);
+        btnNuevoProductoLayout.setHorizontalGroup(
+            btnNuevoProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnNuevoProductoLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(lblHome10)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+        btnNuevoProductoLayout.setVerticalGroup(
+            btnNuevoProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnNuevoProductoLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addGroup(btnNuevoProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHome10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
+        btnNuevoProducto1.setBackground(new java.awt.Color(65, 73, 82));
+        btnNuevoProducto1.setPreferredSize(new java.awt.Dimension(281, 49));
         btnNuevoProducto1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblHome11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/notepad-regular-24.png"))); // NOI18N
@@ -275,25 +298,42 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel13.setText("Lista productos");
         btnNuevoProducto1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 12, 218, -1));
 
+        javax.swing.GroupLayout btnStockLayout = new javax.swing.GroupLayout(btnStock);
+        btnStock.setLayout(btnStockLayout);
+        btnStockLayout.setHorizontalGroup(
+            btnStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnStockLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(lblHome8)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(btnNuevoProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+            .addComponent(btnNuevoProducto1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        btnStockLayout.setVerticalGroup(
+            btnStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnStockLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addGroup(btnStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHome8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnNuevoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnNuevoProducto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
         javax.swing.GroupLayout pnlAdminProductosLayout = new javax.swing.GroupLayout(pnlAdminProductos);
         pnlAdminProductos.setLayout(pnlAdminProductosLayout);
         pnlAdminProductosLayout.setHorizontalGroup(
             pnlAdminProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlAdminProductosLayout.createSequentialGroup()
-                .addComponent(btnStock, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(btnNuevoProducto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(btnNuevoProducto1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnStock, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
         );
         pnlAdminProductosLayout.setVerticalGroup(
             pnlAdminProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlAdminProductosLayout.createSequentialGroup()
-                .addComponent(btnStock, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnNuevoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnNuevoProducto1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addComponent(btnStock, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout btnAdminProcutosLayout = new javax.swing.GroupLayout(btnAdminProcutos);
@@ -305,7 +345,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(lblHome4)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
             .addComponent(pnlAdminProductos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         btnAdminProcutosLayout.setVerticalGroup(
@@ -317,7 +357,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(pnlAdminProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(169, 169, 169))
         );
 
         javax.swing.GroupLayout btnOrdenesLayout = new javax.swing.GroupLayout(btnOrdenes);
@@ -340,7 +380,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(lblHome3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnAdminProcutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAdminProcutos, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -359,13 +399,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnProductosLayout.setVerticalGroup(
             btnProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnProductosLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(btnProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblHome2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnOrdenes, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btnOrdenes, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout btnInicioLayout = new javax.swing.GroupLayout(btnInicio);
@@ -390,8 +429,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(lblHome6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(btnProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logoPequeño.png"))); // NOI18N
@@ -421,8 +459,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addComponent(btnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -433,7 +471,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlLateral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlSuperior, javax.swing.GroupLayout.DEFAULT_SIZE, 1164, Short.MAX_VALUE)
+                    .addComponent(pnlSuperior, javax.swing.GroupLayout.DEFAULT_SIZE, 1154, Short.MAX_VALUE)
                     .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -517,6 +555,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlPrincipal.revalidate();
         pnlPrincipal.repaint();
     }//GEN-LAST:event_btnProductosMouseClicked
+
+    private void btnAdminProcutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdminProcutosMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAdminProcutosMouseClicked
     
     /**
      * @param args the command line arguments
