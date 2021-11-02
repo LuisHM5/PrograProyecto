@@ -538,7 +538,33 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    private void mostrarPanel(javax.swing.JPanel pnl)
+    {
+        pnl.setSize(920,540);
+        pnl.setLocation(0,0);
+        pnlPrincipal.removeAll();
+        pnlPrincipal.add(pnl, BorderLayout.CENTER);
+        pnlPrincipal.revalidate();
+        pnlPrincipal.repaint();        
+    }
+    private void colorBoton(javax.swing.JPanel pnl, boolean isColored)
+    {
+        if(isColored)
+        {
+            
+        }
+    }
+    private void arrastrarVentana(java.awt.event.MouseEvent evt)
+    {
+        int x=evt.getXOnScreen();
+        int y=evt.getYOnScreen();
+        setLocation(x-xMouse,y-yMouse);        
+    }
+    private void mousePresionadoVentana(java.awt.event.MouseEvent evt)
+    {
+        xMouse=evt.getX();
+        yMouse=evt.getY();     
+    }    
     private void lblCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCerrarMouseClicked
         System.exit(0);
     }//GEN-LAST:event_lblCerrarMouseClicked
@@ -562,51 +588,37 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             maximized=false;
         }
                 
-            
-        /*pnlPrincipal.setExtendedState(MAXIMIZED_BOTH);
-        this.setExtendedState(MAXIMIZED_BOTH);*/
     }//GEN-LAST:event_lblMaximizarMouseClicked
     private int xMouse,yMouse;
     private void pnlLateralMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLateralMouseDragged
-        int x=evt.getXOnScreen();
-        int y=evt.getYOnScreen();
-        setLocation(x-xMouse,y-yMouse);
+        arrastrarVentana(evt);
     }//GEN-LAST:event_pnlLateralMouseDragged
     
     private void pnlLateralMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLateralMousePressed
-        xMouse=evt.getX();
-        yMouse=evt.getY();
+        mousePresionadoVentana(evt);
     }//GEN-LAST:event_pnlLateralMousePressed
 
     private void pnlSuperiorMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlSuperiorMouseDragged
-        int x=evt.getXOnScreen();
-        int y=evt.getYOnScreen();
-        setLocation(x-xMouse,y-yMouse);
+        arrastrarVentana(evt);
     }//GEN-LAST:event_pnlSuperiorMouseDragged
 
     private void pnlSuperiorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlSuperiorMousePressed
-        xMouse=evt.getX();
-        yMouse=evt.getY();
+        mousePresionadoVentana(evt);
     }//GEN-LAST:event_pnlSuperiorMousePressed
 
     private void btnInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInicioMouseClicked
         btnInicio.setBackground(new Color(124,109,91));
         btnProductos.setBackground(new Color(89,54,14));
         pnlPrincipal.removeAll();
-        pnlPrincipal.revalidate();
-        pnlPrincipal.repaint();
+        pnlPrincipal.setSize(1210,840);
+        pnlPrincipal.setLocation(0,0);
     }//GEN-LAST:event_btnInicioMouseClicked
 
     private void btnProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductosMouseClicked
-        btnProductos.setBackground(new Color(124,109,91));
-        
+        btnProductos.setBackground(new Color(124,109,91));       
         ProductosPanel productos = new ProductosPanel();
-        productos.setSize(920,540);
-        productos.setLocation(0,0);
-        pnlPrincipal.removeAll();
-        pnlPrincipal.add(productos, BorderLayout.CENTER);
-        pnlPrincipal.revalidate();
-        pnlPrincipal.repaint();
+        mostrarPanel(productos);
+        
     }//GEN-LAST:event_btnProductosMouseClicked
     static boolean expand=false;
     private void btnAdminProcutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdminProcutosMouseClicked
@@ -625,32 +637,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void btnAddStockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddStockMouseClicked
         AnadirStock addstock = new AnadirStock();
-        addstock.setSize(920,540);
-        addstock.setLocation(0,0);
-        pnlPrincipal.removeAll();
-        pnlPrincipal.add(addstock, BorderLayout.CENTER);
-        pnlPrincipal.revalidate();
-        pnlPrincipal.repaint();
+        mostrarPanel(addstock);
     }//GEN-LAST:event_btnAddStockMouseClicked
 
     private void btnNuevoProductoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoProductoMouseClicked
         ListaProductos listprod = new ListaProductos();
-        listprod.setSize(920,540);
-        listprod.setLocation(0,0);
-        pnlPrincipal.removeAll();
-        pnlPrincipal.add(listprod, BorderLayout.CENTER);
-        pnlPrincipal.revalidate();
-        pnlPrincipal.repaint();
+        mostrarPanel(listprod);
     }//GEN-LAST:event_btnNuevoProductoMouseClicked
 
     private void btnListaProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListaProductosMouseClicked
         NuevoProducto nuevoprod = new NuevoProducto();
-        nuevoprod.setSize(920,540);
-        nuevoprod.setLocation(0,0);
-        pnlPrincipal.removeAll();
-        pnlPrincipal.add(nuevoprod, BorderLayout.CENTER);
-        pnlPrincipal.revalidate();
-        pnlPrincipal.repaint();
+        mostrarPanel(nuevoprod);
     }//GEN-LAST:event_btnListaProductosMouseClicked
     
     /**
