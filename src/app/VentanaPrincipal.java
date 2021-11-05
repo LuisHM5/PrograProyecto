@@ -13,7 +13,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      */
     public VentanaPrincipal() {
         initComponents();
-        pnlAdminProductos.setVisible(false);        
+        pnlAdminProductos.setVisible(false);
     }
     
     /**
@@ -120,7 +120,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlSuperiorLayout.setHorizontalGroup(
             pnlSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlSuperiorLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(826, Short.MAX_VALUE)
                 .addComponent(lblMinimizar)
                 .addGap(6, 6, 6)
                 .addComponent(lblMaximizar)
@@ -545,7 +545,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlPrincipal.removeAll();
         pnlPrincipal.add(pnl, BorderLayout.CENTER);
         pnlPrincipal.revalidate();
-        pnlPrincipal.repaint();        
+        pnlPrincipal.repaint();   
+
     }
     private void colorBoton(javax.swing.JPanel pnl, boolean isColored)
     {
@@ -612,6 +613,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlPrincipal.removeAll();
         pnlPrincipal.setSize(1210,840);
         pnlPrincipal.setLocation(0,0);
+
     }//GEN-LAST:event_btnInicioMouseClicked
 
     private void btnProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductosMouseClicked
