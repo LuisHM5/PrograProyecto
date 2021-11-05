@@ -14,6 +14,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      */
     public VentanaPrincipal() {
         initComponents();
+        setLocationRelativeTo(null);
         pnlAdminProductos.setVisible(false);
         pnlLogin.setVisible(false);
 
@@ -783,7 +784,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
         Conexion conn = new Conexion(txtUsuario.getText(),txtPass.getText(),txtHost.getText(),txtPuerto.getText(),txtBd.getText());
         conn.getConnection();
-        mostrarPanel(pnlPrincipal);
+        pnlLogin.setVisible(false);
 
     }//GEN-LAST:event_btnLoginMouseClicked
     
