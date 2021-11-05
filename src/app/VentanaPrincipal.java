@@ -136,7 +136,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(70, 70, 70))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlLoginLayout.createSequentialGroup()
-                        .addGap(256, 256, 256)
+                        .addGap(247, 247, 247)
                         .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel12)
                             .addComponent(jLabel11)
