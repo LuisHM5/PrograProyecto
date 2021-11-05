@@ -664,13 +664,36 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     private void mostrarPanel(javax.swing.JPanel pnl)
     {
-        pnl.setSize(920,540);
+        //pnl.setSize(920,540);
+        if(maximized==true)
+        {
+            pnl.setSize(1640,1000);            
+        }else
+        {
+            pnl.setSize(920,540);    
+        }
+
         pnl.setLocation(0,0);
         pnlPrincipal.removeAll();
         pnlPrincipal.add(pnl, BorderLayout.CENTER);
         pnlPrincipal.revalidate();
         pnlPrincipal.repaint();   
 
+    }
+    private void maximizar(javax.swing.JPanel pnl)
+    {
+       /* if(maximized==false)
+        {
+            this.setExtendedState(pnl.MAXIMIZED_BOTH);
+            GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            this.setMaximizedBounds(env.getMaximumWindowBounds());
+            maximized=true; 
+        }
+        else if(maximized)
+        {
+            setExtendedState(VentanaPrincipal.NORMAL);
+            maximized=false;
+        }*/
     }
     private void colorBoton(javax.swing.JPanel pnl, boolean isColored)
     {
