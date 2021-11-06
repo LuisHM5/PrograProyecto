@@ -1,5 +1,6 @@
 package app;
 
+import AccesoOB.ProductoOB;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
@@ -15,7 +16,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlAdminProductos.setVisible(false);
 
     }
-    
+    static boolean maximized=false;
+    static boolean expand=false;    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -601,7 +603,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void lblMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimizarMouseClicked
         this.setExtendedState(VentanaPrincipal.ICONIFIED);
     }//GEN-LAST:event_lblMinimizarMouseClicked
-    static boolean maximized=true;
+
     private void lblMaximizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMaximizarMouseClicked
         
         if(maximized==false)
@@ -659,7 +661,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         ProductosPanel productos = new ProductosPanel();
         mostrarPanel(productos);       
     }//GEN-LAST:event_btnProductosMouseClicked
-    static boolean expand=false;
+
     private void btnAdminProcutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdminProcutosMouseClicked
         btnAdminProcutos.setBackground(new Color(124,109,91));
         btnInicio.setBackground(new Color(89,54,14));
@@ -701,8 +703,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnAddStock.setBackground(new Color(65,73,82));
         btnListaProductos.setBackground(new Color(65,73,82));
         btnCerrarSesion.setBackground(new Color(89,54,14));
-        ListaProductos listprod = new ListaProductos();
-        mostrarPanel(listprod);
+        NuevoProducto nuevoprod = new NuevoProducto();
+        mostrarPanel(nuevoprod);
     }//GEN-LAST:event_btnNuevoProductoMouseClicked
 
     private void btnListaProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListaProductosMouseClicked
@@ -713,8 +715,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnAddStock.setBackground(new Color(65,73,82));
         btnNuevoProducto.setBackground(new Color(65,73,82));
         btnCerrarSesion.setBackground(new Color(89,54,14));
-        NuevoProducto nuevoprod = new NuevoProducto();
-        mostrarPanel(nuevoprod);
+        ListaProductos listprod = new ListaProductos();
+        mostrarPanel(listprod);
+        Conexion conn = new Conexion(); 
+        ProductoOB pdtobj = new ProductoOB();      
+        pdtobj.listarProductos(conn, listprod.tbProductos);        
     }//GEN-LAST:event_btnListaProductosMouseClicked
 
     private void btnCerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCerrarSesionMouseClicked
@@ -767,7 +772,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btnAddStock;
     private javax.swing.JPanel btnAdminProcutos;
