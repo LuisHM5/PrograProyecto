@@ -91,6 +91,16 @@ public class AniadirStock extends javax.swing.JPanel {
 
         btnBuscar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnBuscar.setText("Buscar");
+        btnBuscar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnBuscarMouseClicked(evt);
+            }
+        });
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
         jLabel8.setText("Cantidad");
@@ -196,7 +206,7 @@ public class AniadirStock extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        String mensaje = "";    
+        String filas[] = new String[6];   
         if(txtId.getText().isEmpty() || txtNombre.getText().isEmpty() || txtCantActual.getText().isEmpty() || txtCantAdd.getText().isEmpty()){
                 JOptionPane.showMessageDialog(null,"Ingrese todos los datos"); 
         }else
@@ -218,12 +228,37 @@ public class AniadirStock extends javax.swing.JPanel {
                 
                 ProductoOB pdtobj = new ProductoOB();
                 //mensaje=pdtobj.agregarProducto(conn, prod);                
-                JOptionPane.showMessageDialog(null,mensaje);
+                //JOptionPane.showMessageDialog(null,mensaje);
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null,"Datos no validos:\n"+e.getMessage());    
             }            
         }
     }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarMouseClicked
+        String filas[] = new String[6]; 
+        if(txtId.getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null,"Ingrese el id del producto"); 
+        }else{
+            Conexion conn = new Conexion();   
+            ProductoOB pdtobj = new ProductoOB();            
+            filas=pdtobj.buscarProducto(conn, Integer.parseInt(txtId.getText()));
+            if(filas != null)
+            {
+                txtNombre.setText(filas[1]);
+                txtCantActual.setText(filas[3]);               
+            }else
+            {
+                JOptionPane.showMessageDialog(null,"No se encontro el producto");
+            }
+        }
+        
+    }//GEN-LAST:event_btnBuscarMouseClicked
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
