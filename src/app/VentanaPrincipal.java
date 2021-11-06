@@ -1,13 +1,10 @@
-/*
- Hola
- */
 package app;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
 import javax.swing.JOptionPane;
-//
+
 public class VentanaPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form VentanaPrincipal
@@ -16,7 +13,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         pnlAdminProductos.setVisible(false);
-        pnlLogin.setVisible(false);
 
     }
     
@@ -30,18 +26,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         pnlPrincipal = new javax.swing.JPanel();
-        pnlLogin = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        txtUsuario = new javax.swing.JTextField();
-        txtPass = new javax.swing.JTextField();
-        txtHost = new javax.swing.JTextField();
-        txtPuerto = new javax.swing.JTextField();
-        txtBd = new javax.swing.JTextField();
-        btnLogin = new javax.swing.JButton();
         pnlSuperior = new javax.swing.JPanel();
         lblCerrar = new javax.swing.JLabel();
         lblMaximizar = new javax.swing.JLabel();
@@ -84,118 +68,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         pnlPrincipal.setBackground(new java.awt.Color(172, 133, 93));
 
-        pnlLogin.setBackground(new java.awt.Color(199, 219, 209));
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setText("Usuario:");
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setText("Contraseña:");
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel10.setText("Host:");
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel11.setText("Puerto:");
-        jLabel11.setToolTipText("");
-
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel12.setText("Base de datos:");
-
-        txtUsuario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtUsuario.setText("Cafeteria");
-
-        txtPass.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtPass.setText("2401");
-
-        txtHost.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtHost.setText("189.154.164.177");
-
-        txtPuerto.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtPuerto.setText("1521");
-
-        txtBd.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtBd.setText("xe");
-
-        btnLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnLogin.setText("Login");
-        btnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnLoginMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnlLoginLayout = new javax.swing.GroupLayout(pnlLogin);
-        pnlLogin.setLayout(pnlLoginLayout);
-        pnlLoginLayout.setHorizontalGroup(
-            pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlLoginLayout.createSequentialGroup()
-                .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(pnlLoginLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(70, 70, 70))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlLoginLayout.createSequentialGroup()
-                        .addGap(247, 247, 247)
-                        .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel2))
-                        .addGap(31, 31, 31)
-                        .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtHost, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPuerto, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtBd, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(321, Short.MAX_VALUE))
-        );
-        pnlLoginLayout.setVerticalGroup(
-            pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlLoginLayout.createSequentialGroup()
-                .addGap(103, 103, 103)
-                .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnlLoginLayout.createSequentialGroup()
-                        .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(pnlLoginLayout.createSequentialGroup()
-                                .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(pnlLoginLayout.createSequentialGroup()
-                                        .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jLabel2)
-                                            .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(38, 38, 38)
-                                        .addComponent(jLabel9))
-                                    .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(54, 54, 54)
-                                .addComponent(jLabel10))
-                            .addComponent(txtHost, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel11))
-                    .addComponent(txtPuerto, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(pnlLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel12)
-                    .addComponent(txtBd, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
-        );
-
         javax.swing.GroupLayout pnlPrincipalLayout = new javax.swing.GroupLayout(pnlPrincipal);
         pnlPrincipal.setLayout(pnlPrincipalLayout);
         pnlPrincipalLayout.setHorizontalGroup(
             pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnlLogin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 920, Short.MAX_VALUE)
         );
         pnlPrincipalLayout.setVerticalGroup(
             pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnlLogin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pnlSuperior.setBackground(new java.awt.Color(234, 239, 211));
@@ -844,18 +725,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnAddStock.setBackground(new Color(65,73,82));
         btnNuevoProducto.setBackground(new Color(65,73,82));
         btnListaProductos.setBackground(new Color(65,73,82));
-        pnlLogin.setVisible(true);
-        mostrarPanel(pnlLogin);
+        LoginDb pnlLoginDb = new LoginDb();
+        mostrarPanel(pnlLoginDb);
         Conexion conn = new Conexion();
         conn.desconexion();
     }//GEN-LAST:event_btnCerrarSesionMouseClicked
-
-    private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
-        Conexion conn = new Conexion(txtUsuario.getText(),txtPass.getText(),txtHost.getText(),txtPuerto.getText(),txtBd.getText());
-        conn.getConnection();
-        pnlLogin.setVisible(false);
-
-    }//GEN-LAST:event_btnLoginMouseClicked
     
     /**
      * @param args the command line arguments
@@ -901,24 +775,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel btnExportar;
     private javax.swing.JPanel btnInicio;
     private javax.swing.JPanel btnListaProductos;
-    private javax.swing.JButton btnLogin;
     private javax.swing.JPanel btnNuevoProducto;
     private javax.swing.JPanel btnOrdenes;
     private javax.swing.JPanel btnProductos;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSep;
     private javax.swing.JLabel lblCerrar;
     private javax.swing.JLabel lblHome;
@@ -935,13 +803,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lblMinimizar;
     private javax.swing.JPanel pnlAdminProductos;
     private javax.swing.JPanel pnlLateral;
-    private javax.swing.JPanel pnlLogin;
     private javax.swing.JPanel pnlPrincipal;
     private javax.swing.JPanel pnlSuperior;
-    private javax.swing.JTextField txtBd;
-    private javax.swing.JTextField txtHost;
-    private javax.swing.JTextField txtPass;
-    private javax.swing.JTextField txtPuerto;
-    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }
