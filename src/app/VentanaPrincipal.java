@@ -689,7 +689,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnNuevoProducto.setBackground(new Color(65,73,82));
         btnListaProductos.setBackground(new Color(65,73,82));
         btnCerrarSesion.setBackground(new Color(89,54,14));
-        AnadirStock addstock = new AnadirStock();
+        AniadirStock addstock = new AniadirStock();
         mostrarPanel(addstock);
     }//GEN-LAST:event_btnAddStockMouseClicked
 
