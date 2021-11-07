@@ -4,7 +4,6 @@ import AccesoOB.ProductoOBJ;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
-import javax.swing.JOptionPane;
 
 public class VentanaPrincipal extends javax.swing.JFrame {
     /**
@@ -440,6 +439,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         btnCerrarSesion.setBackground(new java.awt.Color(89, 54, 14));
+        btnCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnCerrarSesion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnCerrarSesionMouseClicked(evt);
@@ -545,7 +545,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
   
-    private void mostrarPanel(javax.swing.JPanel pnl)
+    public void mostrarPanel(javax.swing.JPanel pnl)
     {
         //pnl.setSize(920,540);
         if(maximized==true)
@@ -731,10 +731,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnAddStock.setBackground(new Color(65,73,82));
         btnNuevoProducto.setBackground(new Color(65,73,82));
         btnListaProductos.setBackground(new Color(65,73,82));
-        LoginDb pnlLoginDb = new LoginDb();
-        mostrarPanel(pnlLoginDb);
         Conexion conn = new Conexion();
         conn.desconexion();
+        this.setVisible(false);
+        LoginDb login = new LoginDb();
+        login.setVisible(true);
     }//GEN-LAST:event_btnCerrarSesionMouseClicked
     
     /**
@@ -767,9 +768,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                //new LoginDb1().setVisible(true);              
                 new VentanaPrincipal().setVisible(true);
-                /*Conexion conn = new Conexion();
-                conn.getConnection();*/
+                Conexion conn = new Conexion("Cafeteria","2401","189.154.164.177","1521","xe");
+                conn.getConnection();
             }
         });
     }
