@@ -263,7 +263,7 @@ public class AniadirStock extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Ingrese el id del producto"); 
         }else{
             Conexion conn = new Conexion();   
-            ProductoOBJ pdtobj = new ProductoOBJ();            
+            ProductoOBJ pdtobj = new ProductoOBJ();  
             filas=pdtobj.buscarProducto(conn, Integer.parseInt(txtId.getText()));
             if(filas != null)
             {
