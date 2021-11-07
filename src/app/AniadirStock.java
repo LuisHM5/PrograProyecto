@@ -226,32 +226,38 @@ public class AniadirStock extends javax.swing.JPanel {
     }
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         String mensaje = "";
-        int cantidad = Integer.parseInt(txtCantActual.getText());
-        int cantidadAdd = Integer.parseInt(txtCantAdd.getText());
+            
         if(txtId.getText().isEmpty() || txtNombre.getText().isEmpty() || txtCantActual.getText().isEmpty() || txtCantAdd.getText().isEmpty()){
                 JOptionPane.showMessageDialog(null,"Ingrese todos los datos"); 
                 
-        }else if(cantidad<0 || cantidadAdd<0)
-        {
-            JOptionPane.showMessageDialog(null,"Cantidad invalidad"); 
         }else{
             try {
-                int id = Integer.parseInt(txtId.getText());
-                int cantidadfinal = cantidad+cantidadAdd;
-                
-                Conexion conn = new Conexion();               
-                ProductoOBJ pdtobj = new ProductoOBJ();
-                mensaje=pdtobj.agregarStock(conn, id,cantidadfinal);                
-                JOptionPane.showMessageDialog(null,mensaje);
-                
-                txtId.setText("");
-                txtNombre.setText("");
-                txtCantActual.setText("");
-                txtCantAdd.setText("");
-                actualizarTablaStock(tbStock);
+                int cantidad = Integer.parseInt(txtCantActual.getText());
+                int cantidadAdd = Integer.parseInt(txtCantAdd.getText());
+                if(cantidad>-1 && cantidadAdd>0){
+
+                    int id = Integer.parseInt(txtId.getText());
+                    int cantidadfinal = cantidad+cantidadAdd;
+
+                    Conexion conn = new Conexion();               
+                    ProductoOBJ pdtobj = new ProductoOBJ();
+                    mensaje=pdtobj.agregarStock(conn, id,cantidadfinal);                
+                    JOptionPane.showMessageDialog(null,mensaje);
+
+                    txtId.setText("");
+                    txtNombre.setText("");
+                    txtCantActual.setText("");
+                    txtCantAdd.setText("");
+                    actualizarTablaStock(tbStock);
+                }else
+                {
+                    JOptionPane.showMessageDialog(null,"Cantidad invalida");  
+                    txtCantAdd.setText("");
+                }
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null,"Datos no validos:\n"+e.getMessage());    
-            }             
+            }
+            
         }
     }//GEN-LAST:event_btnAddActionPerformed
 
