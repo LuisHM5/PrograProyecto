@@ -5,7 +5,7 @@
  */
 package app;
 import setget.Producto;
-import AccesoOB.ProductoOB;
+import AccesoOB.ProductoOBJ;
 import javax.swing.JOptionPane;
 
 /**
@@ -175,9 +175,15 @@ public class NuevoProducto extends javax.swing.JPanel {
                 
                 Conexion conn = new Conexion();
                 
-                ProductoOB pdtobj = new ProductoOB();
+                ProductoOBJ pdtobj = new ProductoOBJ();
                 mensaje=pdtobj.agregarProducto(conn, prod);                
                 JOptionPane.showMessageDialog(null,mensaje);
+                txtNombre.setText("");
+                txtDescripcion.setText("");
+                txtCantidad.setText("");
+                txtPrecio.setText("");
+                txtCosto.setText("");
+                
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null,"Datos no validos:\n"+e.getMessage());    
             }            

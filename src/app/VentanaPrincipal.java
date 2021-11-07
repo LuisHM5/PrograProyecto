@@ -1,6 +1,6 @@
 package app;
 
-import AccesoOB.ProductoOB;
+import AccesoOB.ProductoOBJ;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
@@ -14,7 +14,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         pnlAdminProductos.setVisible(false);
-
     }
     static boolean maximized=false;
     static boolean expand=false;    
@@ -545,6 +544,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+  
     private void mostrarPanel(javax.swing.JPanel pnl)
     {
         //pnl.setSize(920,540);
@@ -693,6 +693,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnCerrarSesion.setBackground(new Color(89,54,14));
         AniadirStock addstock = new AniadirStock();
         mostrarPanel(addstock);
+        addstock.actualizarTablaStock(addstock.tbStock);
     }//GEN-LAST:event_btnAddStockMouseClicked
 
     private void btnNuevoProductoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoProductoMouseClicked
@@ -718,7 +719,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         ListaProductos listprod = new ListaProductos();
         mostrarPanel(listprod);
         Conexion conn = new Conexion(); 
-        ProductoOB pdtobj = new ProductoOB();      
+        ProductoOBJ pdtobj = new ProductoOBJ();      
         pdtobj.listarProductos(conn, listprod.tbProductos);        
     }//GEN-LAST:event_btnListaProductosMouseClicked
 

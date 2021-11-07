@@ -5,7 +5,7 @@
  */
 package app;
 
-import AccesoOB.ProductoOB;
+import AccesoOB.ProductoOBJ;
 import javax.swing.JOptionPane;
 
 /**
@@ -82,7 +82,7 @@ public class ListaProductos extends javax.swing.JPanel {
     private void btnActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizarMouseClicked
         
         Conexion conn = new Conexion(); 
-        ProductoOB pdtobj = new ProductoOB();
+        ProductoOBJ pdtobj = new ProductoOBJ();
         pdtobj.listarProductos(conn, tbProductos);                
     }//GEN-LAST:event_btnActualizarMouseClicked
 
