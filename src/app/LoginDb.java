@@ -5,15 +5,9 @@
  */
 package app;
 
-/**
- *
- * @author G4M3R-PC
- */
 public class LoginDb extends javax.swing.JPanel {
 
-    /**
-     * Creates new form LoginDb
-     */
+
     public LoginDb() {
         initComponents();
     }
