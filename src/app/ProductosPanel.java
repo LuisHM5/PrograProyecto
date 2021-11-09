@@ -256,7 +256,7 @@ public class ProductosPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAgregarOrdenMouseClicked
 
     private void btnAgregarOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarOrdenActionPerformed
-        // TODO add your handling code here:
+        // Hola
     }//GEN-LAST:event_btnAgregarOrdenActionPerformed
 
     
