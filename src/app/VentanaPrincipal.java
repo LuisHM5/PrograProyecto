@@ -759,7 +759,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnListaProductos.setBackground(new Color(65,73,82));
         btnCerrarSesion.setBackground(new Color(89,54,14));
         ProductosPanel productos = new ProductosPanel();
-        mostrarPanel(productos);       
+        mostrarPanel(productos); 
+        Conexion conn = new Conexion(); 
+        ProductoOBJ pdtobj = new ProductoOBJ();
+        pdtobj.listarProductosOrdenes(conn, productos.tbProductosOrdenes); 
     }//GEN-LAST:event_btnProductosMouseClicked
 
     private void btnAdminProcutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdminProcutosMouseClicked
