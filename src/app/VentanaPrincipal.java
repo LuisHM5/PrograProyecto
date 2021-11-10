@@ -750,6 +750,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnNuevoProducto.setBackground(new Color(65,73,82));
         btnListaProductos.setBackground(new Color(65,73,82));
         btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
         pnlPrincipal.removeAll();
         //pnlPrincipal.setSize(1210,840);
         pnlPrincipal.setLocation(0,0);
@@ -765,6 +766,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnNuevoProducto.setBackground(new Color(65,73,82));
         btnListaProductos.setBackground(new Color(65,73,82));
         btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
         ProductosPanel productos = new ProductosPanel();
         mostrarPanel(productos); 
         Conexion conn = new Conexion(); 
@@ -780,6 +782,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnNuevoProducto.setBackground(new Color(65,73,82));
         btnListaProductos.setBackground(new Color(65,73,82));
         btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
         if(expand==false)
         {
             pnlAdminProductos.setVisible(true);
@@ -801,6 +804,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnNuevoProducto.setBackground(new Color(65,73,82));
         btnListaProductos.setBackground(new Color(65,73,82));
         btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
         AniadirStock addstock = new AniadirStock();
         mostrarPanel(addstock);
         addstock.actualizarTablaStock(addstock.tbStock);
@@ -814,6 +818,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnAddStock.setBackground(new Color(65,73,82));
         btnListaProductos.setBackground(new Color(65,73,82));
         btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
         NuevoProducto nuevoprod = new NuevoProducto();
         mostrarPanel(nuevoprod);
     }//GEN-LAST:event_btnNuevoProductoMouseClicked
@@ -826,6 +831,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnAddStock.setBackground(new Color(65,73,82));
         btnNuevoProducto.setBackground(new Color(65,73,82));
         btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
         ListaProductos listprod = new ListaProductos();
         mostrarPanel(listprod);
         Conexion conn = new Conexion(); 
@@ -842,6 +848,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnAddStock.setBackground(new Color(65,73,82));
         btnListaProductos.setBackground(new Color(65,73,82));
         btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
         Conexion conn = new Conexion();
         conn.desconexion();
         this.setVisible(false);
@@ -850,7 +857,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCerrarSesionMouseClicked
 
     private void btnOrdenesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrdenesMouseClicked
-        btnOrdenes.setBackground(new Color(106,114,122));
+        btnOrdenes.setBackground(new Color(124,109,91));
         btnCerrarSesion.setBackground(new Color(89,54,14));
         btnInicio.setBackground(new Color(89,54,14));
         btnProductos.setBackground(new Color(89,54,14));
