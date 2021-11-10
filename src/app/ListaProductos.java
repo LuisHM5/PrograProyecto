@@ -39,10 +39,7 @@ public class ListaProductos extends javax.swing.JPanel {
 
         tbProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {},
-                {},
-                {},
-                {}
+
             },
             new String [] {
 

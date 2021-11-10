@@ -50,7 +50,8 @@ public class PanelOrdenes extends javax.swing.JPanel {
         jLabel3.setText("Su cambio:");
 
         jButton1.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
-        jButton1.setText("Actualiazar");
+        jButton1.setText("Actualizar");
+        jButton1.setActionCommand("Actualizar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

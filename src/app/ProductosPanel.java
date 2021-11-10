@@ -4,7 +4,6 @@ import AccesoOB.ProductoOBJ;
 import AccesoDATABASE.VentasOBJ;
 import setgetters.Ventas;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
 
 public class ProductosPanel extends javax.swing.JPanel {
 
@@ -131,7 +130,8 @@ public class ProductosPanel extends javax.swing.JPanel {
         txtCantOrdenar.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
 
         btnAgregarOrden.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnAgregarOrden.setText("Argregar Orden");
+        btnAgregarOrden.setText("Agregar Orden");
+        btnAgregarOrden.setActionCommand("Agregar Orden");
         btnAgregarOrden.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnAgregarOrdenMouseClicked(evt);

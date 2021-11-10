@@ -867,8 +867,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnListaProductos.setBackground(new Color(65,73,82));   
         PanelOrdenes orden = new PanelOrdenes();
         mostrarPanel(orden);
-        Conexion conn = new Conexion(); 
-        //VentasOBJ vtobj= new VentasOBJ();
+        orden.actualizarTablaVentas(orden.jTableVentas);
     }//GEN-LAST:event_btnOrdenesMouseClicked
 
     /**
