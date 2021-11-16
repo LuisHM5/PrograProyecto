@@ -2,8 +2,6 @@ package app;
 
 import setget.Producto;
 import AccesoOB.ProductoOBJ;
-import AccesoDATABASE.VentasOBJ;
-import setgetters.Ventas;
 import javax.swing.JOptionPane;
 
 public class ModificarProductos extends javax.swing.JPanel {
@@ -89,11 +87,6 @@ public class ModificarProductos extends javax.swing.JPanel {
         });
 
         txtId.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
-        txtId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIdActionPerformed(evt);
-            }
-        });
 
         jLabel2.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
         jLabel2.setText("Id:");
@@ -103,11 +96,6 @@ public class ModificarProductos extends javax.swing.JPanel {
         btnBuscar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnBuscarMouseClicked(evt);
-            }
-        });
-        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarActionPerformed(evt);
             }
         });
 
@@ -248,14 +236,6 @@ public class ModificarProductos extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnBuscarMouseClicked
 
-    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-       
-    }//GEN-LAST:event_btnBuscarActionPerformed
-
-    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIdActionPerformed
-
     private void btnModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarMouseClicked
         String mensaje = "";
         if(txtNombre2.getText().isEmpty() || txtDescripcion.getText().isEmpty() || txtCantidad.getText().isEmpty() || txtPrecio.getText().isEmpty() ||
@@ -263,7 +243,9 @@ public class ModificarProductos extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Ingrese todos los datos");
         }else
         {
-            try {
+            try 
+            {
+                int id = Integer.parseInt(txtId.getText());
                 String nombre = txtNombre2.getText();
                 String descripcion = txtDescripcion.getText();
                 int cantidad = Integer.parseInt(txtCantidad.getText());
@@ -271,6 +253,7 @@ public class ModificarProductos extends javax.swing.JPanel {
                 double costo = Double.parseDouble(txtCosto.getText());
 
                 Producto prod = new Producto();
+                prod.setId(id);
                 prod.setNombre(nombre);
                 prod.setDescripcion(descripcion);
                 prod.setCantidad(cantidad);
@@ -282,6 +265,7 @@ public class ModificarProductos extends javax.swing.JPanel {
                 ProductoOBJ pdtobj = new ProductoOBJ();
                 mensaje=pdtobj.modificarProducto(conn, prod);
                 JOptionPane.showMessageDialog(null,mensaje);
+                txtId.setText("");
                 txtNombre2.setText("");
                 txtDescripcion.setText("");
                 txtCantidad.setText("");

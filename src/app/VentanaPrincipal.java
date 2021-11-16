@@ -736,7 +736,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             pnl.setSize(1640,1000);            
         }else
         {
-            pnl.setSize(1040,607);    
+            pnl.setSize(1040,650);    
         }
 
         pnl.setLocation(0,0);
