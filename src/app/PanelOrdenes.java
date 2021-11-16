@@ -4,8 +4,8 @@ import AccesoDATABASE.VentasOBJ;
 import javax.swing.JTable;
 
 public class PanelOrdenes extends javax.swing.JPanel {
-
-   
+    
+    
     public PanelOrdenes() {
         initComponents();
     }
@@ -17,7 +17,7 @@ public class PanelOrdenes extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTableVentas = new javax.swing.JTable();
+        Tabla_Ventas = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
@@ -30,7 +30,7 @@ public class PanelOrdenes extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Yu Gothic", 0, 24)); // NOI18N
         jLabel1.setText("Total:");
 
-        jTableVentas.setModel(new javax.swing.table.DefaultTableModel(
+        Tabla_Ventas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -41,7 +41,7 @@ public class PanelOrdenes extends javax.swing.JPanel {
 
             }
         ));
-        jScrollPane2.setViewportView(jTableVentas);
+        jScrollPane2.setViewportView(Tabla_Ventas);
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic", 0, 24)); // NOI18N
         jLabel2.setText("Cantidad a dar:");
@@ -51,7 +51,6 @@ public class PanelOrdenes extends javax.swing.JPanel {
 
         jButton1.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
         jButton1.setText("Actualizar");
-        jButton1.setActionCommand("Actualizar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -113,7 +112,7 @@ public class PanelOrdenes extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Conexion conn = new Conexion();
         VentasOBJ vntobj = new VentasOBJ();
-        vntobj.listarVentas(conn, jTableVentas);
+        vntobj.listarVentas(conn, Tabla_Ventas);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public void actualizarTablaVentas(JTable tabla){
@@ -123,12 +122,12 @@ public class PanelOrdenes extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JTable Tabla_Ventas;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane2;
-    public javax.swing.JTable jTableVentas;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;

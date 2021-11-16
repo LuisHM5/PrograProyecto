@@ -4,9 +4,10 @@ import AccesoOB.ProductoOBJ;
 import AccesoDATABASE.VentasOBJ;
 import setgetters.Ventas;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class ProductosPanel extends javax.swing.JPanel {
-
+    DefaultTableModel m;
 
     public ProductosPanel() {
         initComponents();
@@ -109,6 +110,11 @@ public class ProductosPanel extends javax.swing.JPanel {
         });
 
         txtNombre1.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtNombre1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombre1ActionPerformed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
         jLabel7.setText("Nombre:");
@@ -131,7 +137,6 @@ public class ProductosPanel extends javax.swing.JPanel {
 
         btnAgregarOrden.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnAgregarOrden.setText("Agregar Orden");
-        btnAgregarOrden.setActionCommand("Agregar Orden");
         btnAgregarOrden.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnAgregarOrdenMouseClicked(evt);
@@ -266,13 +271,57 @@ public class ProductosPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAgregarOrdenMouseClicked
 
     private void btnAgregarOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarOrdenActionPerformed
+        String mensaje = "";
+        int fsel = tbProductosOrdenes.getSelectedRow();
+        try {
+            String id, nombre, precio, cantidadStock, cantidadOrd, importe;
+            double calcula=0.0, x = 0.0;
+            int canti=0;
+            
+            if(fsel==-1){
+                JOptionPane.showMessageDialog(null, "Debe seleccionar un producto","Advertencia",JOptionPane.WARNING_MESSAGE);
+            }else{
+                m =(DefaultTableModel) tbProductosOrdenes.getModel();
+                id = tbProductosOrdenes.getValueAt(fsel, 0).toString();
+                nombre = tbProductosOrdenes.getValueAt(fsel, 1).toString();
+                precio = tbProductosOrdenes.getValueAt(fsel, 3).toString();
+                cantidadOrd = txtCantOrdenar.getText();
+                
+                
+                x = (Double.parseDouble(precio) * Integer.parseInt(cantidadOrd));
+                importe = String.valueOf(x);
+                
+                PanelOrdenes tabla = new PanelOrdenes();
+                Conexion conn = new Conexion();
+                
+                VentasOBJ vntobj = new VentasOBJ();
+                Ventas vent = new Ventas();
+                vent.setId(Integer.parseInt(id));
+                vent.setNombre(nombre);
+                vent.setPrecio(x);
+                vent.setCantidad(Integer.parseInt(cantidadOrd));
+                mensaje=vntobj.agregarVenta(conn, vent);
+                JOptionPane.showMessageDialog(null,mensaje);
+                
+                //m = (DefaultTableModel) tabla.Tabla_Ventas.getModel();
+                //String filaElemento[] = {id,nombre,cantidadOrd,precio};
+                //m.addRow(filaElemento);
+                
+                
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Verificacion de seleccion de producto","Error",JOptionPane.ERROR_MESSAGE);
+        }
         
-        // Hola
     }//GEN-LAST:event_btnAgregarOrdenActionPerformed
 
     private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIdActionPerformed
+
+    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombre1ActionPerformed
 
     
     

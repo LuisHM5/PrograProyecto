@@ -924,7 +924,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnEliminarProductos.setBackground(new Color(65,73,82));
         PanelOrdenes orden = new PanelOrdenes();
         mostrarPanel(orden);
-        orden.actualizarTablaVentas(orden.jTableVentas);
+        orden.actualizarTablaVentas(orden.Tabla_Ventas);
     }//GEN-LAST:event_btnOrdenesMouseClicked
 
     private void btnProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductosMouseClicked
