@@ -282,7 +282,6 @@ public class ProductosPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Debe seleccionar un producto","Advertencia",JOptionPane.WARNING_MESSAGE);
             }else{
                 m =(DefaultTableModel) tbProductosOrdenes.getModel();
-                id = tbProductosOrdenes.getValueAt(fsel, 0).toString();
                 nombre = tbProductosOrdenes.getValueAt(fsel, 1).toString();
                 precio = tbProductosOrdenes.getValueAt(fsel, 3).toString();
                 cantidadOrd = txtCantOrdenar.getText();
@@ -296,7 +295,6 @@ public class ProductosPanel extends javax.swing.JPanel {
                 
                 VentasOBJ vntobj = new VentasOBJ();
                 Ventas vent = new Ventas();
-                vent.setId(Integer.parseInt(id));
                 vent.setNombre(nombre);
                 vent.setPrecio(x);
                 vent.setCantidad(Integer.parseInt(cantidadOrd));
