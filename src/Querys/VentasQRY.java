@@ -1,7 +1,7 @@
 
 package Querys;
 
-import app.Conexion;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,14 +18,13 @@ public class VentasQRY {
      public String agregarVenta(Connection conn, Ventas vent)
     {
         PreparedStatement pst = null;
-        String sql = "INSERT INTO VENTAS (IDVENTAS,NOMBRE,CANTIDAD,PRECIO)"+ "VALUES(?,?,?,?)";
+        String sql = "INSERT INTO VENTAS (NOMBRE,CANTIDAD,PRECIO)"+ "VALUES(?,?,?)";
         try 
         {
             pst = conn.prepareStatement(sql);
-            pst.setInt(1, vent.getId());
-            pst.setString(2, vent.getNombre());
-            pst.setInt(3, vent.getCantidad());
-            pst.setDouble(4, vent.getPrecio());
+            pst.setString(1, vent.getNombre());
+            pst.setInt(2, vent.getCantidad());
+            pst.setDouble(3, vent.getPrecio());
             pst.execute();
             pst.close();
             mensaje = "Agregado con exito";
@@ -65,6 +64,23 @@ public class VentasQRY {
             JOptionPane.showConfirmDialog(null,"No se puede listar la tabla:\n"+e.getMessage());
         }           
     }
+     public String cancelarVentas(Connection conn)
+    {
+        PreparedStatement pst = null;
+        String sql = "DELETE FROM VENTAS";
+        try 
+        {
+            pst = conn.prepareStatement(sql);
+            pst.execute();
+            pst.close();
+            mensaje = "Venta cancelado con exito!";
+        } 
+        catch (SQLException e) 
+        {
+            mensaje = "Error no se pudo cancelar:\n"+e.getMessage();
+        }
+        return mensaje;
+    }     
            
     
 }

@@ -32,6 +32,28 @@ public class VentasOBJ {
         }
         return mensaje;
     }
+     public String cancelarVentas(Conexion conect)
+    {
+        Connection conn = conect.getConnection();
+        try
+        {
+            mensaje=pov.cancelarVentas(conn);
+        } 
+        catch (Exception e) 
+        {
+            mensaje= mensaje +" "+e.getMessage();
+        }
+        finally{
+            try {
+                if(conn != null){
+                    conn.close();
+                }
+            } catch (Exception e) {
+                mensaje= mensaje +" "+e.getMessage();
+            }
+        }
+        return mensaje;
+    }
      public void listarVentas(Conexion conect, JTable table)
     {
         Connection conn = conect.getConnection();
