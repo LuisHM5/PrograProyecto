@@ -63,6 +63,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnListaProductos = new javax.swing.JPanel();
         lblHome7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        btnModificarProductos = new javax.swing.JPanel();
+        lblHome9 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        btnEliminarProductos = new javax.swing.JPanel();
+        lblHome8 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
         btnCerrarSesion = new javax.swing.JPanel();
         lblHome = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -234,7 +240,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(lblMinimizar)
                     .addComponent(lblMaximizar)
                     .addComponent(lblCerrar))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pnlLateral.setBackground(new java.awt.Color(41, 31, 21));
@@ -441,20 +447,19 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(lblHome12)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel14)
-                .addContainerGap())
+                .addComponent(jLabel14))
         );
         btnAddStockLayout.setVerticalGroup(
             btnAddStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnAddStockLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(btnAddStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblHome12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel14))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addGap(11, 11, 11)
+                .addGroup(btnAddStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHome12, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14)))
         );
 
         btnNuevoProducto.setBackground(new java.awt.Color(65, 73, 82));
+        btnNuevoProducto.setPreferredSize(new java.awt.Dimension(173, 50));
         btnNuevoProducto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnNuevoProductoMouseClicked(evt);
@@ -475,20 +480,19 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(lblHome13)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel15)
-                .addContainerGap())
+                .addComponent(jLabel15))
         );
         btnNuevoProductoLayout.setVerticalGroup(
             btnNuevoProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnNuevoProductoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(btnNuevoProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblHome13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel15))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addGap(11, 11, 11)
+                .addGroup(btnNuevoProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHome13, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15)))
         );
 
         btnListaProductos.setBackground(new java.awt.Color(65, 73, 82));
+        btnListaProductos.setPreferredSize(new java.awt.Dimension(173, 50));
         btnListaProductos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnListaProductosMouseClicked(evt);
@@ -509,17 +513,81 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(lblHome7)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addContainerGap())
+                .addComponent(jLabel8))
         );
         btnListaProductosLayout.setVerticalGroup(
             btnListaProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnListaProductosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(btnListaProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblHome7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel8))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addGap(14, 14, 14)
+                .addGroup(btnListaProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHome7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8)))
+        );
+
+        btnModificarProductos.setBackground(new java.awt.Color(65, 73, 82));
+        btnModificarProductos.setPreferredSize(new java.awt.Dimension(173, 50));
+        btnModificarProductos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnModificarProductosMouseClicked(evt);
+            }
+        });
+
+        lblHome9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/notepad-regular-24.png"))); // NOI18N
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel22.setText("Modificar productos");
+
+        javax.swing.GroupLayout btnModificarProductosLayout = new javax.swing.GroupLayout(btnModificarProductos);
+        btnModificarProductos.setLayout(btnModificarProductosLayout);
+        btnModificarProductosLayout.setHorizontalGroup(
+            btnModificarProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnModificarProductosLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblHome9)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel22))
+        );
+        btnModificarProductosLayout.setVerticalGroup(
+            btnModificarProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnModificarProductosLayout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addGroup(btnModificarProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHome9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel22)))
+        );
+
+        btnEliminarProductos.setBackground(new java.awt.Color(65, 73, 82));
+        btnEliminarProductos.setPreferredSize(new java.awt.Dimension(173, 50));
+        btnEliminarProductos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEliminarProductosMouseClicked(evt);
+            }
+        });
+
+        lblHome8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/notepad-regular-24.png"))); // NOI18N
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel21.setText("Eliminar productos");
+
+        javax.swing.GroupLayout btnEliminarProductosLayout = new javax.swing.GroupLayout(btnEliminarProductos);
+        btnEliminarProductos.setLayout(btnEliminarProductosLayout);
+        btnEliminarProductosLayout.setHorizontalGroup(
+            btnEliminarProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnEliminarProductosLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblHome8)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel21))
+        );
+        btnEliminarProductosLayout.setVerticalGroup(
+            btnEliminarProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnEliminarProductosLayout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addGroup(btnEliminarProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHome8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21)))
         );
 
         javax.swing.GroupLayout pnlAdminProductosLayout = new javax.swing.GroupLayout(pnlAdminProductos);
@@ -527,19 +595,29 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlAdminProductosLayout.setHorizontalGroup(
             pnlAdminProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(btnAddStock, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(btnNuevoProducto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(btnListaProductos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnNuevoProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+            .addComponent(btnListaProductos, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+            .addComponent(btnModificarProductos, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+            .addComponent(btnEliminarProductos, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
         );
         pnlAdminProductosLayout.setVerticalGroup(
             pnlAdminProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlAdminProductosLayout.createSequentialGroup()
-                .addGroup(pnlAdminProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAddStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pnlAdminProductosLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(btnNuevoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addComponent(btnListaProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnAddStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnNuevoProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnListaProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnEliminarProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnModificarProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 30, Short.MAX_VALUE))
         );
+
+        pnlAdminProductosLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAddStock, btnEliminarProductos, btnListaProductos, btnModificarProductos, btnNuevoProducto});
+
+        btnModificarProductos.getAccessibleContext().setAccessibleDescription("");
 
         btnCerrarSesion.setBackground(new java.awt.Color(89, 54, 14));
         btnCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -725,15 +803,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
                 
     }//GEN-LAST:event_lblMaximizarMouseClicked
-    private int xMouse,yMouse;
-    private void pnlLateralMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLateralMouseDragged
-        arrastrarVentana(evt);
-    }//GEN-LAST:event_pnlLateralMouseDragged
-    
-    private void pnlLateralMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLateralMousePressed
-        mousePresionadoVentana(evt);
-    }//GEN-LAST:event_pnlLateralMousePressed
-
+    private int xMouse,yMouse;    
     private void pnlSuperiorMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlSuperiorMouseDragged
         arrastrarVentana(evt);
     }//GEN-LAST:event_pnlSuperiorMouseDragged
@@ -742,102 +812,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         mousePresionadoVentana(evt);
     }//GEN-LAST:event_pnlSuperiorMousePressed
 
-    private void btnInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInicioMouseClicked
-        btnInicio.setBackground(new Color(124,109,91));
-        btnProductos.setBackground(new Color(89,54,14));
-        btnAdminProcutos.setBackground(new Color(89,54,14));
-        btnAddStock.setBackground(new Color(65,73,82));
-        btnNuevoProducto.setBackground(new Color(65,73,82));
-        btnListaProductos.setBackground(new Color(65,73,82));
-        btnCerrarSesion.setBackground(new Color(89,54,14));
-        btnOrdenes.setBackground(new Color(89,54,14));
-        pnlPrincipal.removeAll();
-        //pnlPrincipal.setSize(1210,840);
-        pnlPrincipal.setLocation(0,0);
-        Principal inicio = new Principal();
-        mostrarPanel(inicio);
-    }//GEN-LAST:event_btnInicioMouseClicked
+    private void pnlLateralMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLateralMousePressed
+        mousePresionadoVentana(evt);
+    }//GEN-LAST:event_pnlLateralMousePressed
 
-    private void btnProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductosMouseClicked
-        btnProductos.setBackground(new Color(124,109,91)); 
-        btnInicio.setBackground(new Color(89,54,14));
-        btnAdminProcutos.setBackground(new Color(89,54,14));
-        btnAddStock.setBackground(new Color(65,73,82));
-        btnNuevoProducto.setBackground(new Color(65,73,82));
-        btnListaProductos.setBackground(new Color(65,73,82));
-        btnCerrarSesion.setBackground(new Color(89,54,14));
-        btnOrdenes.setBackground(new Color(89,54,14));
-        ProductosPanel productos = new ProductosPanel();
-        mostrarPanel(productos); 
-        Conexion conn = new Conexion(); 
-        ProductoOBJ pdtobj = new ProductoOBJ();
-        pdtobj.listarProductosOrdenes(conn, productos.tbProductosOrdenes); 
-    }//GEN-LAST:event_btnProductosMouseClicked
-
-    private void btnAdminProcutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdminProcutosMouseClicked
-        btnAdminProcutos.setBackground(new Color(124,109,91));
-        btnInicio.setBackground(new Color(89,54,14));
-        btnProductos.setBackground(new Color(89,54,14));
-        btnAddStock.setBackground(new Color(65,73,82));
-        btnNuevoProducto.setBackground(new Color(65,73,82));
-        btnListaProductos.setBackground(new Color(65,73,82));
-        btnCerrarSesion.setBackground(new Color(89,54,14));
-        btnOrdenes.setBackground(new Color(89,54,14));
-        if(expand==false)
-        {
-            pnlAdminProductos.setVisible(true);
-            expand=true;
-        }
-        else
-        {
-             pnlAdminProductos.setVisible(false);
-             expand=false;
-        }
-
-    }//GEN-LAST:event_btnAdminProcutosMouseClicked
-
-    private void btnAddStockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddStockMouseClicked
-        btnAddStock.setBackground(new Color(106,114,122));
-        btnInicio.setBackground(new Color(89,54,14));
-        btnProductos.setBackground(new Color(89,54,14));
-        btnAdminProcutos.setBackground(new Color(89,54,14));
-        btnNuevoProducto.setBackground(new Color(65,73,82));
-        btnListaProductos.setBackground(new Color(65,73,82));
-        btnCerrarSesion.setBackground(new Color(89,54,14));
-        btnOrdenes.setBackground(new Color(89,54,14));
-        AniadirStock addstock = new AniadirStock();
-        mostrarPanel(addstock);
-        addstock.actualizarTablaStock(addstock.tbStock);
-    }//GEN-LAST:event_btnAddStockMouseClicked
-
-    private void btnNuevoProductoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoProductoMouseClicked
-        btnNuevoProducto.setBackground(new Color(106,114,122));
-        btnInicio.setBackground(new Color(89,54,14));
-        btnProductos.setBackground(new Color(89,54,14));
-        btnAdminProcutos.setBackground(new Color(89,54,14));
-        btnAddStock.setBackground(new Color(65,73,82));
-        btnListaProductos.setBackground(new Color(65,73,82));
-        btnCerrarSesion.setBackground(new Color(89,54,14));
-        btnOrdenes.setBackground(new Color(89,54,14));
-        NuevoProducto nuevoprod = new NuevoProducto();
-        mostrarPanel(nuevoprod);
-    }//GEN-LAST:event_btnNuevoProductoMouseClicked
-
-    private void btnListaProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListaProductosMouseClicked
-        btnListaProductos.setBackground(new Color(106,114,122));
-        btnInicio.setBackground(new Color(89,54,14));
-        btnProductos.setBackground(new Color(89,54,14));
-        btnAdminProcutos.setBackground(new Color(89,54,14));
-        btnAddStock.setBackground(new Color(65,73,82));
-        btnNuevoProducto.setBackground(new Color(65,73,82));
-        btnCerrarSesion.setBackground(new Color(89,54,14));
-        btnOrdenes.setBackground(new Color(89,54,14));
-        ListaProductos listprod = new ListaProductos();
-        mostrarPanel(listprod);
-        Conexion conn = new Conexion(); 
-        ProductoOBJ pdtobj = new ProductoOBJ();      
-        pdtobj.listarProductos(conn, listprod.tbProductos);        
-    }//GEN-LAST:event_btnListaProductosMouseClicked
+    private void pnlLateralMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlLateralMouseDragged
+        arrastrarVentana(evt);
+    }//GEN-LAST:event_pnlLateralMouseDragged
 
     private void btnCerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCerrarSesionMouseClicked
         btnCerrarSesion.setBackground(new Color(124,109,91));
@@ -849,12 +830,86 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnListaProductos.setBackground(new Color(65,73,82));
         btnCerrarSesion.setBackground(new Color(89,54,14));
         btnOrdenes.setBackground(new Color(89,54,14));
+        btnModificarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));
         Conexion conn = new Conexion();
         conn.desconexion();
         this.setVisible(false);
         LoginDb login = new LoginDb();
         login.setVisible(true);
     }//GEN-LAST:event_btnCerrarSesionMouseClicked
+
+    private void btnListaProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListaProductosMouseClicked
+        btnListaProductos.setBackground(new Color(106,114,122));
+        btnInicio.setBackground(new Color(89,54,14));
+        btnProductos.setBackground(new Color(89,54,14));
+        btnAdminProcutos.setBackground(new Color(89,54,14));
+        btnAddStock.setBackground(new Color(65,73,82));
+        btnNuevoProducto.setBackground(new Color(65,73,82));
+        btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
+        btnModificarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));
+        ListaProductos listprod = new ListaProductos();
+        mostrarPanel(listprod);
+        Conexion conn = new Conexion();
+        ProductoOBJ pdtobj = new ProductoOBJ();
+        pdtobj.listarProductos(conn, listprod.tbProductos);
+    }//GEN-LAST:event_btnListaProductosMouseClicked
+
+    private void btnNuevoProductoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoProductoMouseClicked
+        btnNuevoProducto.setBackground(new Color(106,114,122));
+        btnInicio.setBackground(new Color(89,54,14));
+        btnProductos.setBackground(new Color(89,54,14));
+        btnAdminProcutos.setBackground(new Color(89,54,14));
+        btnAddStock.setBackground(new Color(65,73,82));
+        btnListaProductos.setBackground(new Color(65,73,82));
+        btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
+        btnModificarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));
+        NuevoProducto nuevoprod = new NuevoProducto();
+        mostrarPanel(nuevoprod);
+    }//GEN-LAST:event_btnNuevoProductoMouseClicked
+
+    private void btnAddStockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddStockMouseClicked
+        btnAddStock.setBackground(new Color(106,114,122));
+        btnInicio.setBackground(new Color(89,54,14));
+        btnProductos.setBackground(new Color(89,54,14));
+        btnAdminProcutos.setBackground(new Color(89,54,14));
+        btnNuevoProducto.setBackground(new Color(65,73,82));
+        btnListaProductos.setBackground(new Color(65,73,82));
+        btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
+        btnModificarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));
+        AniadirStock addstock = new AniadirStock();
+        mostrarPanel(addstock);
+        addstock.actualizarTablaStock(addstock.tbStock);
+    }//GEN-LAST:event_btnAddStockMouseClicked
+
+    private void btnAdminProcutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdminProcutosMouseClicked
+        btnAdminProcutos.setBackground(new Color(124,109,91));
+        btnInicio.setBackground(new Color(89,54,14));
+        btnProductos.setBackground(new Color(89,54,14));
+        btnAddStock.setBackground(new Color(65,73,82));
+        btnNuevoProducto.setBackground(new Color(65,73,82));
+        btnListaProductos.setBackground(new Color(65,73,82));
+        btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
+        btnModificarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));
+        if(expand==false)
+        {
+            pnlAdminProductos.setVisible(true);
+            expand=true;
+        }
+        else
+        {
+            pnlAdminProductos.setVisible(false);
+            expand=false;
+        }
+    }//GEN-LAST:event_btnAdminProcutosMouseClicked
 
     private void btnOrdenesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrdenesMouseClicked
         btnOrdenes.setBackground(new Color(124,109,91));
@@ -864,11 +919,79 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnAdminProcutos.setBackground(new Color(89,54,14));
         btnAddStock.setBackground(new Color(65,73,82));
         btnNuevoProducto.setBackground(new Color(65,73,82));
-        btnListaProductos.setBackground(new Color(65,73,82));   
+        btnListaProductos.setBackground(new Color(65,73,82));
+        btnModificarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));
         PanelOrdenes orden = new PanelOrdenes();
         mostrarPanel(orden);
         orden.actualizarTablaVentas(orden.jTableVentas);
     }//GEN-LAST:event_btnOrdenesMouseClicked
+
+    private void btnProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductosMouseClicked
+        btnProductos.setBackground(new Color(124,109,91));
+        btnInicio.setBackground(new Color(89,54,14));
+        btnAdminProcutos.setBackground(new Color(89,54,14));
+        btnAddStock.setBackground(new Color(65,73,82));
+        btnNuevoProducto.setBackground(new Color(65,73,82));
+        btnListaProductos.setBackground(new Color(65,73,82));
+        btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
+        btnModificarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));
+        ProductosPanel productos = new ProductosPanel();
+        mostrarPanel(productos);
+        Conexion conn = new Conexion();
+        ProductoOBJ pdtobj = new ProductoOBJ();
+        pdtobj.listarProductosOrdenes(conn, productos.tbProductosOrdenes);
+    }//GEN-LAST:event_btnProductosMouseClicked
+
+    private void btnInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInicioMouseClicked
+        btnInicio.setBackground(new Color(124,109,91));
+        btnProductos.setBackground(new Color(89,54,14));
+        btnAdminProcutos.setBackground(new Color(89,54,14));
+        btnAddStock.setBackground(new Color(65,73,82));
+        btnNuevoProducto.setBackground(new Color(65,73,82));
+        btnListaProductos.setBackground(new Color(65,73,82));
+        btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
+        btnModificarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));
+        pnlPrincipal.removeAll();
+        //pnlPrincipal.setSize(1210,840);
+        pnlPrincipal.setLocation(0,0);
+        Principal inicio = new Principal();
+        mostrarPanel(inicio);
+    }//GEN-LAST:event_btnInicioMouseClicked
+
+    private void btnEliminarProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarProductosMouseClicked
+        btnNuevoProducto.setBackground(new Color(65,73,82));
+        btnInicio.setBackground(new Color(89,54,14));
+        btnProductos.setBackground(new Color(89,54,14));
+        btnAdminProcutos.setBackground(new Color(89,54,14));
+        btnAddStock.setBackground(new Color(65,73,82));
+        btnListaProductos.setBackground(new Color(65,73,82));
+        btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
+        btnModificarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(106,114,122));
+        EliminarProductos ProductoElim = new EliminarProductos();
+        mostrarPanel(ProductoElim);
+    }//GEN-LAST:event_btnEliminarProductosMouseClicked
+
+    private void btnModificarProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarProductosMouseClicked
+        btnNuevoProducto.setBackground(new Color(65,73,82));
+        btnInicio.setBackground(new Color(89,54,14));
+        btnProductos.setBackground(new Color(89,54,14));
+        btnAdminProcutos.setBackground(new Color(89,54,14));
+        btnAddStock.setBackground(new Color(65,73,82));
+        btnListaProductos.setBackground(new Color(65,73,82));
+        btnCerrarSesion.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));
+        btnModificarProductos.setBackground(new Color(106,114,122));
+        btnEliminarProductos.setBackground(new Color(65,73,82));
+        ModificarProductos ProductoMod = new ModificarProductos();
+        mostrarPanel(ProductoMod);
+    }//GEN-LAST:event_btnModificarProductosMouseClicked
 
     /**
      * @param args the command line arguments
@@ -912,9 +1035,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel btnAddStock;
     private javax.swing.JPanel btnAdminProcutos;
     private javax.swing.JPanel btnCerrarSesion;
+    private javax.swing.JPanel btnEliminarProductos;
     private javax.swing.JPanel btnExportar;
     private javax.swing.JPanel btnInicio;
     private javax.swing.JPanel btnListaProductos;
+    private javax.swing.JPanel btnModificarProductos;
     private javax.swing.JPanel btnNuevoProducto;
     private javax.swing.JPanel btnOrdenes;
     private javax.swing.JPanel btnProductos;
@@ -931,6 +1056,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -949,6 +1076,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lblHome5;
     private javax.swing.JLabel lblHome6;
     private javax.swing.JLabel lblHome7;
+    private javax.swing.JLabel lblHome8;
+    private javax.swing.JLabel lblHome9;
     private javax.swing.JLabel lblIcono;
     private javax.swing.JLabel lblMaximizar;
     private javax.swing.JLabel lblMinimizar;
