@@ -66,7 +66,7 @@ public class EliminarProductos extends javax.swing.JPanel {
 
         jTextField1.setText("jTextField1");
 
-        setBackground(new java.awt.Color(172, 133, 93));
+        setBackground(new java.awt.Color(218, 224, 242));
 
         tbProductosOrdenes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

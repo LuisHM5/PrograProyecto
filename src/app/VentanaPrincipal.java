@@ -82,35 +82,45 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlPrincipal.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel19.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("CAFÉ LAVAZZA");
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Te presentamos el Café Lavazza se elabora desde 1895, el café que usamos ");
 
         jLabel9.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("en nuestro negocio, este es elaborado en Torino y es la marca número 1 en italia");
 
         jLabel10.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("por sus famosas mezclas con gramos de todo el mundo. El balance perfecto entre granos de la");
 
         jLabel11.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("variedad arábica y robusta, brindando una mezcla ideal para cada uno de los gustos de los");
 
         jLabel12.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("consumidores más exigentes del mundo. Lavazza tiene una mezcla y una");
 
         jLabel13.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("presentación pensada especialmente en cada necesidad, desde cápsulas para brindar la mezcla de café");
 
         jLabel16.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("y la molienda perfecta para el hogar hasta  soluciones en cápsulas para centros de consumo facilitando el control");
 
         jLabel17.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("de inventarios y reduciendo mermas.");
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cafeteria-caffesito3.jpg"))); // NOI18N
 
         jLabel20.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CaféLavazza.jpg"))); // NOI18N
         jLabel20.setText("jLabel20");
 
@@ -532,11 +542,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        lblHome9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/notepad-regular-24.png"))); // NOI18N
+        lblHome9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/edit-regular-24.png"))); // NOI18N
 
         jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel22.setText("Modificar productos");
+        jLabel22.setText("Modificar producto");
 
         javax.swing.GroupLayout btnModificarProductosLayout = new javax.swing.GroupLayout(btnModificarProductos);
         btnModificarProductos.setLayout(btnModificarProductosLayout);
@@ -565,11 +575,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        lblHome8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/notepad-regular-24.png"))); // NOI18N
+        lblHome8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trash-solid-24.png"))); // NOI18N
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel21.setText("Eliminar productos");
+        jLabel21.setText("Eliminar producto");
 
         javax.swing.GroupLayout btnEliminarProductosLayout = new javax.swing.GroupLayout(btnEliminarProductos);
         btnEliminarProductos.setLayout(btnEliminarProductosLayout);
@@ -736,7 +746,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             pnl.setSize(1640,1000);            
         }else
         {
-            pnl.setSize(1040,650);    
+            pnl.setSize(1040, 640);    
         }
 
         pnl.setLocation(0,0);
@@ -761,12 +771,30 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             maximized=false;
         }*/
     }
-    private void colorBoton(javax.swing.JPanel pnl, boolean isColored)
+    
+
+    //Tipo=true cafe Tipo=false gris
+    private void colorBoton(javax.swing.JPanel pnl,boolean tipo)
     {
-        if(isColored)
-        {
-            
-        }
+        //Cafe
+        btnInicio.setBackground(new Color(89,54,14));
+        btnProductos.setBackground(new Color(89,54,14));
+        btnOrdenes.setBackground(new Color(89,54,14));     
+        btnAdminProcutos.setBackground(new Color(89,54,14));       
+        btnExportar.setBackground(new Color(89,54,14));        
+        btnCerrarSesion.setBackground(new Color(89,54,14)); 
+        //Gris
+        btnNuevoProducto.setBackground(new Color(65,73,82));
+        btnAddStock.setBackground(new Color(65,73,82));
+        btnListaProductos.setBackground(new Color(65,73,82));
+        btnModificarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));                 
+        if(tipo)
+            //Cafe obscuro
+             pnl.setBackground(new Color(124,109,91));
+        else
+            //Gris obscuro
+            pnl.setBackground(new Color(106,114,122));        
     }
     private void arrastrarVentana(java.awt.event.MouseEvent evt)
     {
@@ -821,7 +849,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_pnlLateralMouseDragged
 
     private void btnCerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCerrarSesionMouseClicked
-        btnCerrarSesion.setBackground(new Color(124,109,91));
+        /*btnCerrarSesion.setBackground(new Color(124,109,91));
         btnNuevoProducto.setBackground(new Color(106,114,122));
         btnInicio.setBackground(new Color(89,54,14));
         btnProductos.setBackground(new Color(89,54,14));
@@ -831,7 +859,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnCerrarSesion.setBackground(new Color(89,54,14));
         btnOrdenes.setBackground(new Color(89,54,14));
         btnModificarProductos.setBackground(new Color(65,73,82));
-        btnEliminarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));*/
+        colorBoton(btnCerrarSesion, true);
         Conexion conn = new Conexion();
         conn.desconexion();
         this.setVisible(false);
@@ -840,7 +869,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCerrarSesionMouseClicked
 
     private void btnListaProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListaProductosMouseClicked
-        btnListaProductos.setBackground(new Color(106,114,122));
+        
+        /*btnListaProductos.setBackground(new Color(106,114,122));
         btnInicio.setBackground(new Color(89,54,14));
         btnProductos.setBackground(new Color(89,54,14));
         btnAdminProcutos.setBackground(new Color(89,54,14));
@@ -849,7 +879,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnCerrarSesion.setBackground(new Color(89,54,14));
         btnOrdenes.setBackground(new Color(89,54,14));
         btnModificarProductos.setBackground(new Color(65,73,82));
-        btnEliminarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));*/
+        
+        colorBoton(btnListaProductos, false);
         ListaProductos listprod = new ListaProductos();
         mostrarPanel(listprod);
         Conexion conn = new Conexion();
@@ -858,7 +890,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnListaProductosMouseClicked
 
     private void btnNuevoProductoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoProductoMouseClicked
-        btnNuevoProducto.setBackground(new Color(106,114,122));
+        /*btnNuevoProducto.setBackground(new Color(106,114,122));
         btnInicio.setBackground(new Color(89,54,14));
         btnProductos.setBackground(new Color(89,54,14));
         btnAdminProcutos.setBackground(new Color(89,54,14));
@@ -867,13 +899,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnCerrarSesion.setBackground(new Color(89,54,14));
         btnOrdenes.setBackground(new Color(89,54,14));
         btnModificarProductos.setBackground(new Color(65,73,82));
-        btnEliminarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));*/
+        colorBoton(btnNuevoProducto, false);
         NuevoProducto nuevoprod = new NuevoProducto();
         mostrarPanel(nuevoprod);
     }//GEN-LAST:event_btnNuevoProductoMouseClicked
 
     private void btnAddStockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddStockMouseClicked
-        btnAddStock.setBackground(new Color(106,114,122));
+        /*btnAddStock.setBackground(new Color(106,114,122));
         btnInicio.setBackground(new Color(89,54,14));
         btnProductos.setBackground(new Color(89,54,14));
         btnAdminProcutos.setBackground(new Color(89,54,14));
@@ -882,14 +915,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnCerrarSesion.setBackground(new Color(89,54,14));
         btnOrdenes.setBackground(new Color(89,54,14));
         btnModificarProductos.setBackground(new Color(65,73,82));
-        btnEliminarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));*/
+        colorBoton(btnAddStock, false);
         AniadirStock addstock = new AniadirStock();
         mostrarPanel(addstock);
         addstock.actualizarTablaStock(addstock.tbStock);
     }//GEN-LAST:event_btnAddStockMouseClicked
 
     private void btnAdminProcutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdminProcutosMouseClicked
-        btnAdminProcutos.setBackground(new Color(124,109,91));
+        /*btnAdminProcutos.setBackground(new Color(124,109,91));
         btnInicio.setBackground(new Color(89,54,14));
         btnProductos.setBackground(new Color(89,54,14));
         btnAddStock.setBackground(new Color(65,73,82));
@@ -898,7 +932,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnCerrarSesion.setBackground(new Color(89,54,14));
         btnOrdenes.setBackground(new Color(89,54,14));
         btnModificarProductos.setBackground(new Color(65,73,82));
-        btnEliminarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));*/
+        colorBoton(btnAdminProcutos, true);
         if(expand==false)
         {
             pnlAdminProductos.setVisible(true);
@@ -912,7 +947,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAdminProcutosMouseClicked
 
     private void btnOrdenesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrdenesMouseClicked
-        btnOrdenes.setBackground(new Color(124,109,91));
+        /*btnOrdenes.setBackground(new Color(124,109,91));
         btnCerrarSesion.setBackground(new Color(89,54,14));
         btnInicio.setBackground(new Color(89,54,14));
         btnProductos.setBackground(new Color(89,54,14));
@@ -921,14 +956,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnNuevoProducto.setBackground(new Color(65,73,82));
         btnListaProductos.setBackground(new Color(65,73,82));
         btnModificarProductos.setBackground(new Color(65,73,82));
-        btnEliminarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));*/
+        colorBoton(btnOrdenes, true);
+        
         PanelOrdenes orden = new PanelOrdenes();
         mostrarPanel(orden);
         orden.actualizarTablaVentas(orden.Tabla_Ventas);
     }//GEN-LAST:event_btnOrdenesMouseClicked
 
     private void btnProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductosMouseClicked
-        btnProductos.setBackground(new Color(124,109,91));
+       /* btnProductos.setBackground(new Color(124,109,91));
         btnInicio.setBackground(new Color(89,54,14));
         btnAdminProcutos.setBackground(new Color(89,54,14));
         btnAddStock.setBackground(new Color(65,73,82));
@@ -937,7 +974,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnCerrarSesion.setBackground(new Color(89,54,14));
         btnOrdenes.setBackground(new Color(89,54,14));
         btnModificarProductos.setBackground(new Color(65,73,82));
-        btnEliminarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));*/
+        colorBoton(btnProductos,true);
         ProductosPanel productos = new ProductosPanel();
         mostrarPanel(productos);
         Conexion conn = new Conexion();
@@ -946,7 +984,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnProductosMouseClicked
 
     private void btnInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInicioMouseClicked
-        btnInicio.setBackground(new Color(124,109,91));
+       /* btnInicio.setBackground(new Color(124,109,91));
         btnProductos.setBackground(new Color(89,54,14));
         btnAdminProcutos.setBackground(new Color(89,54,14));
         btnAddStock.setBackground(new Color(65,73,82));
@@ -955,7 +993,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnCerrarSesion.setBackground(new Color(89,54,14));
         btnOrdenes.setBackground(new Color(89,54,14));
         btnModificarProductos.setBackground(new Color(65,73,82));
-        btnEliminarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));*/
+        colorBoton(btnInicio, true);
         pnlPrincipal.removeAll();
         //pnlPrincipal.setSize(1210,840);
         pnlPrincipal.setLocation(0,0);
@@ -964,7 +1003,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInicioMouseClicked
 
     private void btnEliminarProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarProductosMouseClicked
-        btnNuevoProducto.setBackground(new Color(65,73,82));
+        /*btnNuevoProducto.setBackground(new Color(65,73,82));
         btnInicio.setBackground(new Color(89,54,14));
         btnProductos.setBackground(new Color(89,54,14));
         btnAdminProcutos.setBackground(new Color(89,54,14));
@@ -973,13 +1012,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnCerrarSesion.setBackground(new Color(89,54,14));
         btnOrdenes.setBackground(new Color(89,54,14));
         btnModificarProductos.setBackground(new Color(65,73,82));
-        btnEliminarProductos.setBackground(new Color(106,114,122));
+        btnEliminarProductos.setBackground(new Color(106,114,122));*/
+        colorBoton(btnEliminarProductos, false);
         EliminarProductos ProductoElim = new EliminarProductos();
         mostrarPanel(ProductoElim);
     }//GEN-LAST:event_btnEliminarProductosMouseClicked
 
     private void btnModificarProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarProductosMouseClicked
-        btnNuevoProducto.setBackground(new Color(65,73,82));
+        /*btnNuevoProducto.setBackground(new Color(65,73,82));
         btnInicio.setBackground(new Color(89,54,14));
         btnProductos.setBackground(new Color(89,54,14));
         btnAdminProcutos.setBackground(new Color(89,54,14));
@@ -988,7 +1028,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnCerrarSesion.setBackground(new Color(89,54,14));
         btnOrdenes.setBackground(new Color(89,54,14));
         btnModificarProductos.setBackground(new Color(106,114,122));
-        btnEliminarProductos.setBackground(new Color(65,73,82));
+        btnEliminarProductos.setBackground(new Color(65,73,82));*/
+        colorBoton(btnModificarProductos, false);
+        
         ModificarProductos ProductoMod = new ModificarProductos();
         mostrarPanel(ProductoMod);
     }//GEN-LAST:event_btnModificarProductosMouseClicked

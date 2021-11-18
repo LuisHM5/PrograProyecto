@@ -148,6 +148,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Yu Gothic" size="14" style="0"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="CAF&#xc9; LAVAZZA"/>
           </Properties>
         </Component>
@@ -156,6 +157,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Yu Gothic" size="14" style="0"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Te presentamos el Caf&#xe9; Lavazza se elabora desde 1895, el caf&#xe9; que usamos "/>
           </Properties>
         </Component>
@@ -164,6 +166,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Yu Gothic" size="14" style="0"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="en nuestro negocio, este es elaborado en Torino y es la marca n&#xfa;mero 1 en italia"/>
           </Properties>
         </Component>
@@ -172,6 +175,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Yu Gothic" size="14" style="0"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="por sus famosas mezclas con gramos de todo el mundo. El balance perfecto entre granos de la"/>
           </Properties>
         </Component>
@@ -180,6 +184,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Yu Gothic" size="14" style="0"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="variedad ar&#xe1;bica y robusta, brindando una mezcla ideal para cada uno de los gustos de los"/>
           </Properties>
         </Component>
@@ -188,6 +193,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Yu Gothic" size="14" style="0"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="consumidores m&#xe1;s exigentes del mundo. Lavazza tiene una mezcla y una"/>
           </Properties>
         </Component>
@@ -196,6 +202,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Yu Gothic" size="14" style="0"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="presentaci&#xf3;n pensada especialmente en cada necesidad, desde c&#xe1;psulas para brindar la mezcla de caf&#xe9;"/>
           </Properties>
         </Component>
@@ -204,6 +211,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Yu Gothic" size="14" style="0"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="y la molienda perfecta para el hogar hasta  soluciones en c&#xe1;psulas para centros de consumo facilitando el control"/>
           </Properties>
         </Component>
@@ -212,6 +220,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Yu Gothic" size="14" style="0"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="de inventarios y reduciendo mermas."/>
           </Properties>
         </Component>
@@ -227,6 +236,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Yu Gothic" size="14" style="0"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/imagenes/Caf&#xe9;Lavazza.jpg"/>
             </Property>
@@ -907,7 +917,7 @@
                 <Component class="javax.swing.JLabel" name="lblHome9">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/imagenes/notepad-regular-24.png"/>
+                      <Image iconType="3" name="/imagenes/edit-regular-24.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -919,7 +929,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="cc" red="cc" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Modificar productos"/>
+                    <Property name="text" type="java.lang.String" value="Modificar producto"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -964,7 +974,7 @@
                 <Component class="javax.swing.JLabel" name="lblHome8">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/imagenes/notepad-regular-24.png"/>
+                      <Image iconType="3" name="/imagenes/trash-solid-24.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -976,7 +986,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="cc" red="cc" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Eliminar productos"/>
+                    <Property name="text" type="java.lang.String" value="Eliminar producto"/>
                   </Properties>
                 </Component>
               </SubComponents>

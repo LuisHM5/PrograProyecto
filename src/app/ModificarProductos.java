@@ -64,7 +64,7 @@ public class ModificarProductos extends javax.swing.JPanel {
 
         jTextField1.setText("jTextField1");
 
-        setBackground(new java.awt.Color(172, 133, 93));
+        setBackground(new java.awt.Color(205, 231, 190));
 
         tbProductosOrdenes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
