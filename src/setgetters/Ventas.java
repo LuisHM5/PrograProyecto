@@ -7,17 +7,20 @@ public class Ventas {
     private String nombre;
     private int cantidad;
     private double precio;
+    private int idprodc;
+
 
      
     public Ventas(){
         
     }
 
-    public Ventas(int id, String nombre, int cantidad, double precio) {
+    public Ventas(int id, String nombre, int cantidad, double precio, int idprodc) {
         this.id = id;
         this.nombre = nombre;
         this.cantidad = cantidad;
         this.precio = precio;
+        this.idprodc = idprodc;
     }
 
     public int getId() {
@@ -51,6 +54,17 @@ public class Ventas {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
+    public int getIdprodc() {
+        return idprodc;
+    }
+
+    public void setIdprodc(int idprodc) {
+        this.idprodc = idprodc;
+    }
+
+
+    
 
    
    @Override

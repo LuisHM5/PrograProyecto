@@ -10,6 +10,7 @@ public class VentasOBJ {
     private String mensaje = "";
     private VentasQRY pov = new VentasQRY();    
     private String filas []= new String[6];
+    private String rescatarVentas[][] = new String[100][100];
      public String agregarVenta(Conexion conect, Ventas vent)
     {
         Connection conn = conect.getConnection();
@@ -76,4 +77,29 @@ public class VentasOBJ {
             }
         }               
     } 
+    public String [][] rescatarVentas(Conexion conect)
+    {
+        Connection conn = conect.getConnection();
+        
+        try 
+        {
+            rescatarVentas=pov.rescatarVentas(conn);
+        } 
+        catch (Exception e) 
+        {
+            mensaje= mensaje +" "+e.getMessage();
+        }
+        finally{
+            try {
+                if(conn != null){
+                    conn.close();
+                }
+            } catch (Exception e) {
+                mensaje= mensaje +" "+e.getMessage();
+            }
+        }
+        return rescatarVentas;
+    }
+
+           
 }

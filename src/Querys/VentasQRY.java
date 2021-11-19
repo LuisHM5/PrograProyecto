@@ -15,16 +15,18 @@ import setgetters.Ventas;
 public class VentasQRY {
     private String mensaje = "";
     private String filasBusc[] = new String[4];
+    private String rescatarVentas[][] = new String[100][100];
      public String agregarVenta(Connection conn, Ventas vent)
     {
         PreparedStatement pst = null;
-        String sql = "INSERT INTO VENTAS (NOMBRE,CANTIDAD,PRECIO)"+ "VALUES(?,?,?)";
+        String sql = "INSERT INTO VENTAS (NOMBRE,CANTIDAD,PRECIO,IDPRODUCTO)"+ "VALUES(?,?,?,?)";
         try 
         {
             pst = conn.prepareStatement(sql);
             pst.setString(1, vent.getNombre());
             pst.setInt(2, vent.getCantidad());
             pst.setDouble(3, vent.getPrecio());
+            pst.setInt(4, vent.getIdprodc());
             pst.execute();
             pst.close();
             mensaje = "Agregado con exito";
@@ -80,6 +82,48 @@ public class VentasQRY {
             mensaje = "Error no se pudo cancelar:\n"+e.getMessage();
         }
         return mensaje;
+    }   
+     
+    public String [][] rescatarVentas(Connection conn)
+    {
+        String sql2 ="SELECT COUNT(*) FROM VENTAS";
+        String sql = "SELECT * FROM VENTAS ORDER BY PRECIO";
+        int cantidad=-1;
+        PreparedStatement pst = null;
+        ResultSet resu = null;
+        try {
+            pst = conn.prepareStatement(sql2);
+            resu = pst.executeQuery(); 
+            if(resu.next())
+            {
+                cantidad=resu.getInt(1);
+            }
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null,"No se pudo wey\n"+e.getMessage());
+        }
+        try 
+        {
+            pst = null;
+            resu = null;
+            pst = conn.prepareStatement(sql);
+            resu = pst.executeQuery(); 
+            if(resu.next())
+            {
+
+                for(int j=0;j<cantidad+1;j++)
+                {
+                    for(int i=0; i<5;i++)
+                    {
+                        rescatarVentas[i][j]=resu.getString(i+1);
+                    }
+                }                                                                
+            }                             
+        } 
+        catch (SQLException e) 
+        {
+            JOptionPane.showConfirmDialog(null,"No se puede listar la tabla:\n"+e.getMessage());
+        }
+        return rescatarVentas;
     }     
            
     
