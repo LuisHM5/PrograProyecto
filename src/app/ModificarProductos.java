@@ -210,7 +210,7 @@ public class ModificarProductos extends javax.swing.JPanel {
     private void btnActualizarPOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarPOActionPerformed
         Conexion conn = new Conexion(); 
         ProductoOBJ pdtobj = new ProductoOBJ();
-        pdtobj.listarProductosOrdenes(conn, tbProductosOrdenes);
+        pdtobj.listarProductos(conn, tbProductosOrdenes);
     }//GEN-LAST:event_btnActualizarPOActionPerformed
 
     private void btnBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarMouseClicked

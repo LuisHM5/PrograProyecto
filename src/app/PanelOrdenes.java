@@ -174,7 +174,7 @@ public class PanelOrdenes extends javax.swing.JPanel {
             try {
                 total=Double.parseDouble(txtTotal.getText());
                 cantidadDar=Double.parseDouble(txtCantAdd.getText()); 
-                if(total<cantidadDar)
+                if(total<=cantidadDar)
                 {
                     cambio=cantidadDar-total;
                     //Otra forma
@@ -187,34 +187,56 @@ public class PanelOrdenes extends javax.swing.JPanel {
                     
                     ProductoOBJ pdt = new ProductoOBJ();
                     
-                    int cantidadActual=0,cantidadRestar=0,cantidadfinal=-1;
+                    int cantidadActual=0,cantidadRestar=0,cantidadfinal=0,idproductos;
                     
                     m=(DefaultTableModel) Tabla_Ventas.getModel();
-                    String producto []= new String[5];
+                    
                     int fila=Tabla_Ventas.getRowCount();
                     String [][] ventas = new String[100][100];
                     ventas=vntobj.rescatarVentas(conn);
+                    boolean stockCorrecto=true;
                     for(int i=0; i<fila; i++)
-                    {                        
-                       cantidadRestar=-Integer.parseInt(Tabla_Ventas.getValueAt(i, 2).toString());  
-                       pdt.agregarStock(conn, WIDTH, cantidadRestar);
-                       producto=pdt.buscarProducto(conn, i);                      
+                    {  
+                       idproductos=Integer.parseInt(ventas[4][i]);
+                       cantidadRestar=Integer.parseInt(ventas[2][i]);
+                       String producto []= new String[5];
+                       producto=pdt.buscarProducto(conn, idproductos);                       
                        cantidadActual=Integer.parseInt(producto[3]);
-                       if(cantidadfinal>=0)
+                       cantidadfinal=cantidadActual-cantidadRestar;
+                                            
+                       if(cantidadfinal<0)
                        {
-                           
-                       }else{
-                            JOptionPane.showMessageDialog(null, "Stock insuficiente!");
-                       }
-                        
+                           stockCorrecto=false;
+                           JOptionPane.showMessageDialog(null,producto[1]+" sin Stock!");
+                       }                     
                     }
+                    if(stockCorrecto)
+                    {
+                        for(int i=0; i<fila; i++)
+                        {  
+                            idproductos=Integer.parseInt(ventas[4][i]);
+                            cantidadRestar=Integer.parseInt(ventas[2][i]);
+                            String producto []= new String[5];
+                            producto=pdt.buscarProducto(conn, idproductos);                       
+                            cantidadActual=Integer.parseInt(producto[3]);
+                            cantidadfinal=cantidadActual-cantidadRestar;
+                            pdt.agregarStock(conn, idproductos, cantidadfinal);                            
+                        } 
+                        JOptionPane.showMessageDialog(null, "Compra exitosa");
+                        vntobj.cancelarVentas(conn);
+                        actualizarTablaVentas(Tabla_Ventas); 
 
-                    JOptionPane.showMessageDialog(null, "Compra exitosa");
-                    vntobj.cancelarVentas(conn);
-                    actualizarTablaVentas(Tabla_Ventas);
+                    }else
+                    {
+                        JOptionPane.showMessageDialog(null, "Compra rechazada:\nfalta de productos","",JOptionPane.WARNING_MESSAGE);
+                        vntobj.cancelarVentas(conn);
+                        actualizarTablaVentas(Tabla_Ventas);                     
+                    }
                     txtCambio.setText("");
                     txtTotal.setText("");
                     txtCantAdd.setText("");
+                  
+
                 }else
                 {
                     JOptionPane.showMessageDialog(null, "Ingrese mas dinero");
