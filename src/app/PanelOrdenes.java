@@ -183,22 +183,35 @@ public class PanelOrdenes extends javax.swing.JPanel {
                     
                     Conexion conn = new Conexion();
                     VentasOBJ vntobj = new VentasOBJ();
-                    vntobj.cancelarVentas(conn);
-                    actualizarTablaVentas(Tabla_Ventas);
+
                     
                     ProductoOBJ pdt = new ProductoOBJ();
                     
-                    int cantidadPedir=0,cantidadRestar=0;
-                    m=(DefaultTableModel) Tabla_Ventas.getModel();
-                    int fila=Tabla_Ventas.getRowCount();
+                    int cantidadActual=0,cantidadRestar=0,cantidadfinal=-1;
                     
+                    m=(DefaultTableModel) Tabla_Ventas.getModel();
+                    String producto []= new String[5];
+                    int fila=Tabla_Ventas.getRowCount();
+                    String [][] ventas = new String[100][100];
+                    ventas=vntobj.rescatarVentas(conn);
                     for(int i=0; i<fila; i++)
                     {                        
                        cantidadRestar=-Integer.parseInt(Tabla_Ventas.getValueAt(i, 2).toString());  
                        pdt.agregarStock(conn, WIDTH, cantidadRestar);
+                       producto=pdt.buscarProducto(conn, i);                      
+                       cantidadActual=Integer.parseInt(producto[3]);
+                       if(cantidadfinal>=0)
+                       {
+                           
+                       }else{
+                            JOptionPane.showMessageDialog(null, "Stock insuficiente!");
+                       }
+                        
                     }
 
                     JOptionPane.showMessageDialog(null, "Compra exitosa");
+                    vntobj.cancelarVentas(conn);
+                    actualizarTablaVentas(Tabla_Ventas);
                     txtCambio.setText("");
                     txtTotal.setText("");
                     txtCantAdd.setText("");
