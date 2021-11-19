@@ -1,15 +1,17 @@
 
 package app;
 import AccesoDATABASE.VentasOBJ;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
-
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+import setget.Producto;
+import AccesoOB.ProductoOBJ;
 public class PanelOrdenes extends javax.swing.JPanel {
-    
-    
     public PanelOrdenes() {
         initComponents();
     }
-
+    DefaultTableModel m;
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -20,11 +22,12 @@ public class PanelOrdenes extends javax.swing.JPanel {
         Tabla_Ventas = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txtTotal = new javax.swing.JTextField();
+        txtCantAdd = new javax.swing.JTextField();
+        txtCambio = new javax.swing.JTextField();
+        btnActualizar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
+        btnComprar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(102, 102, 255));
 
@@ -50,19 +53,34 @@ public class PanelOrdenes extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         jLabel3.setText("Su cambio:");
 
-        jButton1.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
-        jButton1.setText("Actualizar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        txtTotal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        txtCantAdd.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        txtCambio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        btnActualizar.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        btnActualizar.setText("Actualizar");
+        btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnActualizarActionPerformed(evt);
             }
         });
 
+        btnCancelar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnCancelar.setText("Cancelar");
         btnCancelar.setActionCommand("btnCancelarlar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarActionPerformed(evt);
+            }
+        });
+
+        btnComprar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnComprar.setText("Comprar");
+        btnComprar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnComprarMouseClicked(evt);
             }
         });
 
@@ -78,21 +96,24 @@ public class PanelOrdenes extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtCantAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
+                        .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtCambio, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(btnCancelar)
+                        .addGap(75, 75, 75)
+                        .addComponent(btnComprar)))
                 .addContainerGap(73, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btnActualizar)
                 .addGap(467, 467, 467))
         );
         layout.setVerticalGroup(
@@ -101,56 +122,130 @@ public class PanelOrdenes extends javax.swing.JPanel {
                 .addGap(154, 154, 154)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCantAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCambio, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
-                .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(12, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btnActualizar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
         Conexion conn = new Conexion();
         VentasOBJ vntobj = new VentasOBJ();
         vntobj.listarVentas(conn, Tabla_Ventas);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        actualizarTablaVentas(Tabla_Ventas);
+        mostrarTotal(Tabla_Ventas, txtTotal);
+    }//GEN-LAST:event_btnActualizarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         String mensaje="";
         Conexion conn = new Conexion();
         VentasOBJ vntobj = new VentasOBJ();
+        
         mensaje=vntobj.cancelarVentas(conn);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
+    private void btnComprarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnComprarMouseClicked
+        double total=0;
+        double cantidadDar=0;
+        double cambio=0;
+
+        if(txtTotal.getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Ingrese todos los campos","Error",JOptionPane.ERROR_MESSAGE); 
+        }else
+        {
+            try {
+                total=Double.parseDouble(txtTotal.getText());
+                cantidadDar=Double.parseDouble(txtCantAdd.getText()); 
+                if(total<cantidadDar)
+                {
+                    cambio=cantidadDar-total;
+                    //Otra forma
+                    //txtCambio.setText(cambio+"");
+                    txtCambio.setText(Double.toString(cambio));
+                    
+                    Conexion conn = new Conexion();
+                    VentasOBJ vntobj = new VentasOBJ();
+                    vntobj.cancelarVentas(conn);
+                    actualizarTablaVentas(Tabla_Ventas);
+                    
+                    ProductoOBJ pdt = new ProductoOBJ();
+                    
+                    int cantidadPedir=0,cantidadRestar=0;
+                    m=(DefaultTableModel) Tabla_Ventas.getModel();
+                    int fila=Tabla_Ventas.getRowCount();
+                    
+                    for(int i=0; i<fila; i++)
+                    {                        
+                       cantidadRestar=-Integer.parseInt(Tabla_Ventas.getValueAt(i, 2).toString());  
+                       pdt.agregarStock(conn, WIDTH, cantidadRestar);
+                    }
+
+                    JOptionPane.showMessageDialog(null, "Compra exitosa");
+                    txtCambio.setText("");
+                    txtTotal.setText("");
+                    txtCantAdd.setText("");
+                }else
+                {
+                    JOptionPane.showMessageDialog(null, "Ingrese mas dinero");
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Datos incorrectos","Error",JOptionPane.ERROR_MESSAGE); 
+            }           
+        }
+    }//GEN-LAST:event_btnComprarMouseClicked
+    
+    public void mostrarTotal(JTable tabla, JTextField t){
+        DefaultTableModel modelo;      
+        modelo =(DefaultTableModel) tabla.getModel();
+        int fila=tabla.getRowCount();
+        double total=0;
+        for(int i=0; i<fila; i++)
+        {
+           total+=Double.parseDouble(tabla.getValueAt(i, 3).toString());
+        }
+        t.setText(Double.toString(total));    
+        //t.setText(Double.toString(precio));        
+    }
     public void actualizarTablaVentas(JTable tabla){
+        DefaultTableModel modelo; 
         Conexion conn = new Conexion();
         VentasOBJ vntobj = new VentasOBJ();
         vntobj.listarVentas(conn, tabla);
+        
+        modelo =(DefaultTableModel) tabla.getModel();
+        String [] columnas = {"ID","NOMBRE","CANTIDAD","IMPORTE"};
+        modelo.setColumnIdentifiers(columnas);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JTable Tabla_Ventas;
+    private javax.swing.JButton btnActualizar;
     private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnComprar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField txtCambio;
+    private javax.swing.JTextField txtCantAdd;
+    public javax.swing.JTextField txtTotal;
     // End of variables declaration//GEN-END:variables
 }

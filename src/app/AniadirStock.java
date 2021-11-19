@@ -3,6 +3,7 @@ package app;
 import AccesoOB.ProductoOBJ;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 
 /**
@@ -84,10 +85,16 @@ public class AniadirStock extends javax.swing.JPanel {
 
             }
         ));
+        tbStock.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbStockMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tbStock);
 
         btnBuscar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnBuscar.setText("Buscar");
+        btnBuscar.setActionCommand("");
         btnBuscar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnBuscarMouseClicked(evt);
@@ -284,6 +291,15 @@ public class AniadirStock extends javax.swing.JPanel {
     private void ActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarMouseClicked
         actualizarTablaStock(tbStock);     
     }//GEN-LAST:event_ActualizarMouseClicked
+
+    private void tbStockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbStockMouseClicked
+        DefaultTableModel m;
+        m =(DefaultTableModel) tbStock.getModel();
+        int fsel = tbStock.getSelectedRow();
+        txtId.setText(tbStock.getValueAt(fsel, 0).toString());
+        txtNombre.setText(tbStock.getValueAt(fsel, 1).toString());
+        txtCantActual.setText(tbStock.getValueAt(fsel, 2).toString());      
+    }//GEN-LAST:event_tbStockMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -743,12 +743,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         //pnl.setSize(920,540);
         if(maximized==true)
         {
-            pnl.setSize(1640,1000);            
+            pnl.setSize(1680,1000);            
         }else
         {
-            pnl.setSize(1040, 640);    
+            pnl.setSize(1040, 630);    
         }
-
+        
         pnl.setLocation(0,0);
         pnlPrincipal.removeAll();
         pnlPrincipal.add(pnl, BorderLayout.CENTER);
@@ -822,6 +822,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             this.setExtendedState(VentanaPrincipal.MAXIMIZED_BOTH);
             GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
             this.setMaximizedBounds(env.getMaximumWindowBounds());
+            /*pnlPrincipal.setSize(1640,1000);  
+            pnlPrincipal.setLocation(0,0);
+            pnlPrincipal.removeAll();
+            pnlPrincipal.add(pnlPrincipal, BorderLayout.CENTER);
+            pnlPrincipal.revalidate();
+            pnlPrincipal.repaint();   
+            
+            pnlPrincipal.removeAll();
+            pnlPrincipal.add(pnlPrincipal, BorderLayout.CENTER);
+            pnlPrincipal.revalidate();
+            pnlPrincipal.repaint(); */ 
             maximized=true;            
         }
         else if(maximized)
@@ -898,6 +909,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         PanelOrdenes orden = new PanelOrdenes();
         mostrarPanel(orden);
         orden.actualizarTablaVentas(orden.Tabla_Ventas);
+        orden.mostrarTotal(orden.Tabla_Ventas, orden.txtTotal);
     }//GEN-LAST:event_btnOrdenesMouseClicked
 
     private void btnProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProductosMouseClicked
@@ -911,9 +923,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void btnInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInicioMouseClicked
         colorBoton(btnInicio, true);
-        pnlPrincipal.removeAll();
+        //pnlPrincipal.removeAll();
         //pnlPrincipal.setSize(1210,840);
-        pnlPrincipal.setLocation(0,0);
+        //pnlPrincipal.setLocation(0,0);
         Principal inicio = new Principal();
         mostrarPanel(inicio);
     }//GEN-LAST:event_btnInicioMouseClicked
