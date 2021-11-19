@@ -146,9 +146,6 @@ public class PanelOrdenes extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        Conexion conn = new Conexion();
-        VentasOBJ vntobj = new VentasOBJ();
-        vntobj.listarVentas(conn, Tabla_Ventas);
         actualizarTablaVentas(Tabla_Ventas);
         mostrarTotal(Tabla_Ventas, txtTotal);
     }//GEN-LAST:event_btnActualizarActionPerformed

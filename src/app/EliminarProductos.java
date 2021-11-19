@@ -5,10 +5,12 @@ import AccesoOB.ProductoOBJ;
 import AccesoDATABASE.VentasOBJ;
 import setgetters.Ventas;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 public class EliminarProductos extends javax.swing.JPanel {
 
-
+    DefaultTableModel m;
     public EliminarProductos() {
         initComponents();
     }
@@ -79,6 +81,11 @@ public class EliminarProductos extends javax.swing.JPanel {
 
             }
         ));
+        tbProductosOrdenes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbProductosOrdenesMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tbProductosOrdenes);
 
         btnActualizarPO.setText("Actualizar");
@@ -218,11 +225,13 @@ public class EliminarProductos extends javax.swing.JPanel {
                 .addGap(26, 26, 26))
         );
     }// </editor-fold>//GEN-END:initComponents
-    
-    private void btnActualizarPOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarPOActionPerformed
+    public void actualizarTablaElim(JTable tabla){
         Conexion conn = new Conexion(); 
         ProductoOBJ pdtobj = new ProductoOBJ();
-        pdtobj.listarProductosOrdenes(conn, tbProductosOrdenes);
+        pdtobj.listarProductos(conn, tbProductosOrdenes);
+    }
+    private void btnActualizarPOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarPOActionPerformed
+        actualizarTablaElim(tbProductosOrdenes);
     }//GEN-LAST:event_btnActualizarPOActionPerformed
 
     private void btnBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarMouseClicked
@@ -270,6 +279,8 @@ public class EliminarProductos extends javax.swing.JPanel {
                 ProductoOBJ pdtobj = new ProductoOBJ();
                 mensaje=pdtobj.eliminarProducto(conn,ID);
                 JOptionPane.showMessageDialog(null,mensaje);
+                actualizarTablaElim(tbProductosOrdenes);
+                txtId.setText("");
                 txtNombre2.setText("");
                 txtDescripcion.setText("");
                 txtCantidad.setText("");
@@ -281,6 +292,17 @@ public class EliminarProductos extends javax.swing.JPanel {
             }
         }
     }//GEN-LAST:event_EliminarModificarMouseClicked
+
+    private void tbProductosOrdenesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbProductosOrdenesMouseClicked
+        m =(DefaultTableModel) tbProductosOrdenes.getModel();
+        int fsel = tbProductosOrdenes.getSelectedRow();
+        txtId.setText(tbProductosOrdenes.getValueAt(fsel, 0).toString());
+        txtNombre2.setText(tbProductosOrdenes.getValueAt(fsel, 1).toString());
+        txtDescripcion.setText(tbProductosOrdenes.getValueAt(fsel, 2).toString());
+        txtCantidad.setText(tbProductosOrdenes.getValueAt(fsel, 3).toString());
+        txtPrecio.setText(tbProductosOrdenes.getValueAt(fsel, 5).toString());
+        txtCosto.setText(tbProductosOrdenes.getValueAt(fsel, 4).toString());
+    }//GEN-LAST:event_tbProductosOrdenesMouseClicked
 
     
     

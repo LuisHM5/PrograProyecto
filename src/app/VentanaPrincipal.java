@@ -923,24 +923,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void btnInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInicioMouseClicked
         colorBoton(btnInicio, true);
-        //pnlPrincipal.removeAll();
-        //pnlPrincipal.setSize(1210,840);
-        //pnlPrincipal.setLocation(0,0);
         Principal inicio = new Principal();
         mostrarPanel(inicio);
     }//GEN-LAST:event_btnInicioMouseClicked
 
     private void btnEliminarProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarProductosMouseClicked
         colorBoton(btnEliminarProductos, false);
-        EliminarProductos ProductoElim = new EliminarProductos();
-        mostrarPanel(ProductoElim);
+        EliminarProductos productoElim = new EliminarProductos();
+        mostrarPanel(productoElim);
+        productoElim.actualizarTablaElim(productoElim.tbProductosOrdenes);
     }//GEN-LAST:event_btnEliminarProductosMouseClicked
 
     private void btnModificarProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarProductosMouseClicked
-        colorBoton(btnModificarProductos, false);
+        colorBoton(btnModificarProductos, false);        
+        ModificarProductos productoMod = new ModificarProductos();
+        mostrarPanel(productoMod);
+        productoMod.actualizarTabla(productoMod.tbProductosOrdenes);
         
-        ModificarProductos ProductoMod = new ModificarProductos();
-        mostrarPanel(ProductoMod);
     }//GEN-LAST:event_btnModificarProductosMouseClicked
 
     /**
