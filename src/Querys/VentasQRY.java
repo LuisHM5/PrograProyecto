@@ -86,38 +86,23 @@ public class VentasQRY {
      
     public String [][] rescatarVentas(Connection conn)
     {
-        String sql2 ="SELECT COUNT(*) FROM VENTAS";
         String sql = "SELECT * FROM VENTAS ORDER BY PRECIO";
-        int cantidad=-1;
         PreparedStatement pst = null;
         ResultSet resu = null;
-        try {
-            pst = conn.prepareStatement(sql2);
-            resu = pst.executeQuery(); 
-            if(resu.next())
-            {
-                cantidad=resu.getInt(1);
-            }
-        } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null,"No se pudo wey\n"+e.getMessage());
-        }
         try 
         {
             pst = null;
             resu = null;
             pst = conn.prepareStatement(sql);
             resu = pst.executeQuery(); 
-            if(resu.next())
-            {
-
-                for(int j=0;j<cantidad+1;j++)
-                {
-                    for(int i=0; i<5;i++)
-                    {
-                        rescatarVentas[i][j]=resu.getString(i+1);
-                    }
-                }                                                                
-            }                             
+            int j=0;
+            while (resu.next()) {
+                for(int i=0; i<5;i++)
+               {
+                   rescatarVentas[i][j]=resu.getString(i+1);
+               }
+               j++;
+            }                                                                                                                   
         } 
         catch (SQLException e) 
         {
