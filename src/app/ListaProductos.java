@@ -6,7 +6,7 @@
 package app;
 
 import AccesoOB.ProductoOBJ;
-import javax.swing.JOptionPane;
+import conn.Conexion;
 
 /**
  *

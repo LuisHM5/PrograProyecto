@@ -2,7 +2,7 @@ package app;
 
 import setget.Producto;
 import AccesoOB.ProductoOBJ;
-import static app.ProductosPanel.idprod;
+import conn.Conexion;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;

@@ -1,9 +1,8 @@
 package app;
 
-import setget.Producto;
+
 import AccesoOB.ProductoOBJ;
-import AccesoDATABASE.VentasOBJ;
-import setgetters.Ventas;
+import conn.Conexion;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;

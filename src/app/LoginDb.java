@@ -6,6 +6,8 @@
 package app;
 
 import javax.swing.JOptionPane;
+import conn.Conexion;
+import java.sql.Connection;
 
 /**
  *
@@ -165,15 +167,23 @@ public class LoginDb extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        Conexion conn = new Conexion(txtUsuario.getText(),txtPass.getText(),txtHost.getText(),txtPuerto.getText(),txtBd.getText());
-        conn.getConnection();
-        if(conn != null)
+        if(txtUsuario.getText().isEmpty() || txtPass.getText().isEmpty() || txtHost.getText().isEmpty() || 
+                txtPuerto.getText().isEmpty() ||txtBd.getText().isEmpty())
         {
-            JOptionPane.showMessageDialog(null, "Conexion exitosa");
-            this.setVisible(false);
-            VentanaPrincipal vtnP = new VentanaPrincipal();
-            vtnP.setVisible(true);
+            JOptionPane.showMessageDialog(null,"Ingrese todos los datos");
+        }else
+        {
+            Conexion conn = new Conexion(txtUsuario.getText(),txtPass.getText(),txtHost.getText(),txtPuerto.getText(),txtBd.getText());
+            Connection conexion=conn.getConnection();    
+            if(conexion != null)
+            {
+                JOptionPane.showMessageDialog(null, "Conexion exitosa");
+                this.setVisible(false);
+                VentanaPrincipal vtnP = new VentanaPrincipal();
+                vtnP.setVisible(true);
+            }            
         }
+
         
     }//GEN-LAST:event_btnLoginActionPerformed
 

@@ -7,7 +7,7 @@ package app;
 import setget.Producto;
 import AccesoOB.ProductoOBJ;
 import javax.swing.JOptionPane;
-
+import conn.Conexion;
 /**
  *
  * @author G4M3R-PC

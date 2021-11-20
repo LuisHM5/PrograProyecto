@@ -1,5 +1,5 @@
 package app;
-
+import conn.Conexion;
 import AccesoOB.ProductoOBJ;
 import AccesoDATABASE.VentasOBJ;
 import setgetters.Ventas;

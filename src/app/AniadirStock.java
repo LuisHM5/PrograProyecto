@@ -1,5 +1,6 @@
 package app;
 
+import conn.Conexion;
 import AccesoOB.ProductoOBJ;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;

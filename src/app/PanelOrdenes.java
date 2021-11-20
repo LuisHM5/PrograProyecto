@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
-import setget.Producto;
+import conn.Conexion;
 import AccesoOB.ProductoOBJ;
 public class PanelOrdenes extends javax.swing.JPanel {
     public PanelOrdenes() {

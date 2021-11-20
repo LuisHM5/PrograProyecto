@@ -5,9 +5,7 @@ import AccesoOB.ProductoOBJ;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
-import javax.swing.table.DefaultTableModel;
-
-import java.io.IOException;
+import conn.Conexion;
         
 public class VentanaPrincipal extends javax.swing.JFrame {
     
@@ -763,22 +761,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pnlPrincipal.repaint();   
 
     }
-    private void maximizar(javax.swing.JPanel pnl)
-    {
-       /* if(maximized==false)
-        {
-            this.setExtendedState(pnl.MAXIMIZED_BOTH);
-            GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
-            this.setMaximizedBounds(env.getMaximumWindowBounds());
-            maximized=true; 
-        }
-        else if(maximized)
-        {
-            setExtendedState(VentanaPrincipal.NORMAL);
-            maximized=false;
-        }*/
-    }
-    
 
     //Tipo=true cafe Tipo=false gris
     private void colorBoton(javax.swing.JPanel pnl,boolean tipo)
@@ -829,17 +811,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             this.setExtendedState(VentanaPrincipal.MAXIMIZED_BOTH);
             GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
             this.setMaximizedBounds(env.getMaximumWindowBounds());
-            /*pnlPrincipal.setSize(1640,1000);  
-            pnlPrincipal.setLocation(0,0);
-            pnlPrincipal.removeAll();
-            pnlPrincipal.add(pnlPrincipal, BorderLayout.CENTER);
-            pnlPrincipal.revalidate();
-            pnlPrincipal.repaint();   
-            
-            pnlPrincipal.removeAll();
-            pnlPrincipal.add(pnlPrincipal, BorderLayout.CENTER);
-            pnlPrincipal.revalidate();
-            pnlPrincipal.repaint(); */ 
             maximized=true;            
         }
         else if(maximized)
@@ -950,6 +921,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnModificarProductosMouseClicked
 
     private void btnExportarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExportarMouseClicked
+        colorBoton(btnExportar,true);
         ListaProductos lt = new ListaProductos();
         Conexion conn = new Conexion();
         ProductoOBJ obj = new ProductoOBJ();
