@@ -1,4 +1,4 @@
-package app;
+package conn;
 //jdbc
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -42,6 +42,7 @@ public class Conexion {
             }
         }
         catch (ClassNotFoundException | SQLException e){
+            conn = null;
             JOptionPane.showMessageDialog(null, "Conexcion Erronea:\n"+e.getMessage());
         }
         return conn;        
