@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -18,8 +19,8 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 public class ExportarExel {
-    
-    public void exportarExcel(JTable t) throws IOException {
+    //throws IOException
+    public void exportarExcel(JTable t)  {       
         JFileChooser chooser = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("Excel", "xls");
         chooser.setFileFilter(filter);
@@ -65,7 +66,7 @@ public class ExportarExel {
                 archivo.close();
                 Desktop.getDesktop().open(archivoXLS);
             } catch (IOException | NumberFormatException e) {
-                throw e;
+                JOptionPane.showMessageDialog(null,""+e.getMessage()); 
             }
         }
     }

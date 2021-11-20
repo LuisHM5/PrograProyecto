@@ -5,7 +5,9 @@ import AccesoOB.ProductoOBJ;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
+import javax.swing.table.DefaultTableModel;
 
+import java.io.IOException;
         
 public class VentanaPrincipal extends javax.swing.JFrame {
     
@@ -370,13 +372,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         btnExportar.setBackground(new java.awt.Color(89, 54, 14));
+        btnExportar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnExportarMouseClicked(evt);
+            }
+        });
 
         lblHome5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/file-export-solid-24.png"))); // NOI18N
         lblHome5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel6.setText("Exportar");
+        jLabel6.setText("Exportar productos");
         jLabel6.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout btnExportarLayout = new javax.swing.GroupLayout(btnExportar);
@@ -387,7 +394,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(lblHome5)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         btnExportarLayout.setVerticalGroup(
@@ -942,6 +949,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnModificarProductosMouseClicked
 
+    private void btnExportarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExportarMouseClicked
+        ListaProductos lt = new ListaProductos();
+        Conexion conn = new Conexion();
+        ProductoOBJ obj = new ProductoOBJ();
+        obj.listarProductos(conn, lt.tbProductos);
+        ExportarExel exportar = new ExportarExel();
+        exportar.exportarExcel(lt.tbProductos);
+    }//GEN-LAST:event_btnExportarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -979,7 +995,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btnAddStock;
     private javax.swing.JPanel btnAdminProcutos;
