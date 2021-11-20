@@ -1,7 +1,7 @@
 
 package AccesoDATABASE;
 import Querys.VentasQRY;
-import app.Conexion;
+import conn.Conexion;
 import java.sql.Connection;
 import javax.swing.JTable;
 import setgetters.Ventas;
