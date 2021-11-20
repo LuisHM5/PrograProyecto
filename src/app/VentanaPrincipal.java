@@ -988,10 +988,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //new LoginDb1().setVisible(true);              
-                new VentanaPrincipal().setVisible(true);
-                Conexion conn = new Conexion("Cafeteria","2401","189.154.164.177","1521","xe");
-                conn.getConnection();
+                new LoginDb().setVisible(true);              
+                //new VentanaPrincipal().setVisible(true);
+                //Conexion conn = new Conexion("Cafeteria","2401","189.154.164.177","1521","xe");
+                //conn.getConnection();
             }
         });
     }
