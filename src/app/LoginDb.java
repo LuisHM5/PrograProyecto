@@ -53,7 +53,6 @@ public class LoginDb extends javax.swing.JFrame {
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         txtUsuario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtUsuario.setText("Cafeteria");
         txtUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         btnLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -87,14 +86,14 @@ public class LoginDb extends javax.swing.JFrame {
         jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         txtHost.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtHost.setText("189.154.164.177");
+        txtHost.setText("localhost");
+        txtHost.setToolTipText("");
         txtHost.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setText("Contraseña:");
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        txtPass.setText("2401");
         txtPass.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
